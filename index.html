@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dar Al Quran Wal Hikmah — Home of the Qur'an and Wisdom</title>
-  <meta name="description" content="Qur'an programs led by Shaykh Muhammad Abdelaziz in Mississauga: summer Qur'an program for children and drop-in Tajweed classes for adults.">
+  <meta name="description" content="Qur'an programs led by Shaykh Muhammad Abdelaziz: summer Qur'an program for children and drop-in Tajweed classes for adults.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,30 +14,32 @@
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="index.html">
+    <a class="brand" href="#top">
       <span class="brand-en">Dar Al Quran Wal Hikmah</span>
       <span class="brand-ar arabic">دار القرآن والحكمة</span>
     </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu"><span></span></label>
     <nav class="site-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="summer-program.html">Summer Program</a>
-      <a href="adult-classes.html">Adult Classes</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
+      <a href="#about">About</a>
+      <a href="#summer">Summer Program</a>
+      <a href="#adults">Adult Classes</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<div class="hero">
+<div class="hero" id="top">
   <h1>Dar Al Quran Wal Hikmah</h1>
   <div class="hero-ar arabic">دار القرآن والحكمة</div>
   <p class="tagline">Home of the Qur'an and Wisdom — nurturing our community, young and old, to be living examples of the Qur'an, under the guidance of Shaykh Muhammad Abdelaziz.</p>
-  <a class="btn btn-primary" href="summer-program.html">Summer Qur'an Program</a>
-  <a class="btn btn-outline" href="adult-classes.html">Adult Tajweed Classes</a>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#summer">Summer Qur'an Program</a>
+    <a class="btn btn-outline" href="#adults">Adult Tajweed Classes</a>
+  </div>
 </div>
 
-<section>
+<section id="about">
   <div class="container">
     <h2 class="section-title">Our Three Pillars</h2>
     <p class="section-sub">Every program we offer is built on the same foundation.</p>
@@ -58,40 +60,188 @@
         <p>Fostering good character (akhlāq) and social etiquette (adab), upon the prophetic principle that the Deen is dealings.</p>
       </div>
     </div>
+
+    <div class="split" style="margin-top:3rem;">
+      <div>
+        <h2>Shaykh Muhammad Abdelaziz</h2>
+        <!-- TODO: replace placeholder bio with the Shaykh's approved biography -->
+        <p>Shaykh Muhammad Abdelaziz leads all of our programs personally — from teaching the classical rules of Tajweed to hearing each student's recitation one-on-one and assessing every child who joins the summer program.</p>
+        <p style="margin-top:0.8rem;"><em>A full biography of the Shaykh — his studies, teachers, and ijāzāt — is coming soon, in shā' Allāh.</em></p>
+      </div>
+      <img src="assets/shaykh-muhammad-2.jpg" alt="Shaykh Muhammad Abdelaziz leading du'a">
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="summer">
+  <div class="container">
+    <h2 class="section-title">Summer Qur'an Program</h2>
+    <p class="section-sub">An enriching summer designed to strengthen your child's connection with the Qur'an through proper recitation and memorization, while nurturing strong Islamic character in a positive and engaging environment.</p>
+
+    <div class="facts">
+      <div class="fact"><div class="fact-label">Days</div><div class="fact-value">Monday – Thursday</div></div>
+      <div class="fact"><div class="fact-label">Hours</div><div class="fact-value">9:00 AM – 2:00 PM</div></div>
+      <div class="fact"><div class="fact-label">Dates</div><div class="fact-value">July 6 – August 27</div></div>
+      <div class="fact"><div class="fact-label">Ages</div><div class="fact-value">7 – 14+</div></div>
+      <div class="fact"><div class="fact-label">Fee</div><div class="fact-value">$450 / month</div></div>
+      <div class="fact"><div class="fact-label">Options</div><div class="fact-value">4-week or 8-week</div></div>
+    </div>
+
+    <h3 style="text-align:center; font-size:1.5rem; margin:2.8rem 0 1.4rem;">What Your Child Will Gain</h3>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Qur'an Memorization</h3>
+        <div class="card-ar arabic">الحفظ</div>
+        <ul class="checks">
+          <li><strong>New memorization:</strong> tailored daily goals based on each student's capability.</li>
+          <li><strong>Recent revision (qarībah):</strong> daily reinforcement of newly memorized portions.</li>
+          <li><strong>Long-term revision (ba'īdah):</strong> a systematic cycle through previous ajzā' to keep everything strong.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Recitation &amp; Tajweed</h3>
+        <div class="card-ar arabic">التلاوة والتجويد</div>
+        <ul class="checks">
+          <li><strong>Individual guidance:</strong> one-on-one listening to build fluency and remove fear of reading.</li>
+          <li><strong>Daily micro-lessons:</strong> fundamental rules such as Nūn Sākinah, Madd, and Makhārij.</li>
+          <li><strong>Love of recitation:</strong> instilling appreciation for the melodic beauty of the Qur'an.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Character &amp; Fun</h3>
+        <div class="card-ar arabic">الأخلاق</div>
+        <ul class="checks">
+          <li><strong>Daily ethics session:</strong> manners, Prophetic stories, and a daily Hadith focus.</li>
+          <li><strong>Games and outdoor time</strong> during a full midday recess.</li>
+          <li><strong>Congregational prayer:</strong> students pray Dhuhr together each day.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="text-align:center; font-size:1.5rem; margin:2.8rem 0 1.4rem;">A Day at the Program</h3>
+    <div class="table-wrap">
+      <table class="schedule">
+        <tr><th>Time</th><th>Activity</th><th>Details</th></tr>
+        <tr><td class="time">8:45 AM</td><td>Assembly</td><td>Student arrival, warm morning greetings, and short morning adhkār.</td></tr>
+        <tr><td class="time">9:00 AM</td><td>Study Block 1</td><td>Focused Qur'an memorization, Tajweed, and individual tracking.</td></tr>
+        <tr><td class="time">11:00 AM</td><td>Midday Recess</td><td>1 hour 15 minutes for food, physical activity, and outdoor park fun.</td></tr>
+        <tr><td class="time">12:30 PM</td><td>Study Block 2</td><td>Reviewing student recitation progress with correction and feedback.</td></tr>
+        <tr><td class="time">1:30 PM</td><td>Ethics Session</td><td>Interactive manners lesson, Prophetic stories, and daily Hadith focus.</td></tr>
+        <tr><td class="time">2:00 PM</td><td>Dhuhr &amp; Dismissal</td><td>Congregational Dhuhr prayer before departure home.</td></tr>
+      </table>
+    </div>
+    <div class="callout">
+      <h3>Daily closing</h3>
+      <p>All students join in praying Dhuhr in congregation at 1:45 PM. Prompt parent pick-up is at exactly 2:00 PM.</p>
+    </div>
+
+    <h3 style="text-align:center; font-size:1.5rem; margin:2.8rem 0 1.4rem;">How Registration Works</h3>
+    <ol class="steps">
+      <li><strong>Fill out the registration form.</strong> Tell us about your child, their Qur'an background, and whether you'd like the 4-week or 8-week option.</li>
+      <li><strong>Receive a personal call from Shaykh Muhammad.</strong> He will call you directly to answer any questions you may have.</li>
+      <li><strong>Attend the open house.</strong> All registered parents are invited before the program starts.</li>
+      <li><strong>Individual assessment.</strong> Each child is personally assessed by the Shaykh to ensure they are set up for success.</li>
+      <li><strong>Pay securely online.</strong> Fees are paid by card through Stripe.</li>
+    </ol>
+    <div class="actions">
+      <a class="btn btn-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSfjvlqYgHmHBeFqlYweQc48OdldEdTlbbv8Zcs1tdQlb9grVQ/viewform" target="_blank" rel="noopener">Register Now</a>
+      <!-- TODO: replace href below with the Stripe Payment Link once provided -->
+      <a class="btn btn-primary" href="#contact">Pay Fees (Stripe)</a>
+    </div>
+    <p class="section-sub" style="margin-top:1.2rem;">Registering more than one child? Please complete a separate registration form for each child. Limited space available.</p>
+  </div>
+</section>
+
+<section id="adults">
+  <div class="container">
+    <h2 class="section-title">Adult Tajweed Classes</h2>
+    <p class="section-sub">Weekend classes for adults who want to perfect their recitation of the Qur'an — studying the classical Tajweed texts and reciting directly to Shaykh Muhammad Abdelaziz.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Drop In on Weekends</h3>
+        <p>There is no fixed enrollment schedule — classes run on weekends and you simply drop in and join. Come when you can, and progress at your own pace.</p>
+      </div>
+      <div class="card">
+        <h3>Learn Together</h3>
+        <p>Lessons are taught in a group setting: the Shaykh walks through the rules of Tajweed with the whole class, verse by verse from the classical poems, with examples from the Qur'an.</p>
+      </div>
+      <div class="card">
+        <h3>Recite One-on-One</h3>
+        <p>Within the group class, recitation is individual — you wait your turn, then recite directly to Shaykh Muhammad and receive personal correction and feedback.</p>
+      </div>
+    </div>
+
+    <h3 style="text-align:center; font-size:1.5rem; margin:2.8rem 0 0.5rem;">What You Will Study</h3>
+    <p class="section-sub">Students progress through the classical poems of Tajweed and Qirā'āt according to their level. At each level, you will memorize the poem, recite it to the Shaykh, and be tested on your understanding of its rules.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Tuḥfat al-Aṭfāl</h3>
+        <div class="card-ar arabic">تحفة الأطفال</div>
+        <p><strong>Foundation level.</strong> The beloved poem of Sulaymān al-Jamzūrī covering the essentials: the rulings of nūn sākinah and tanwīn, mīm sākinah, and the types of madd.</p>
+      </div>
+      <div class="card">
+        <h3>Al-Muqaddimah al-Jazariyyah</h3>
+        <div class="card-ar arabic">المقدمة الجزرية</div>
+        <p><strong>Intermediate level.</strong> The classic of Imam Ibn al-Jazarī: articulation points (makhārij), letter characteristics (ṣifāt), and the finer rules of precise recitation.</p>
+      </div>
+      <div class="card">
+        <h3>Ash-Shāṭibiyyah</h3>
+        <div class="card-ar arabic">الشاطبية</div>
+        <p><strong>Advanced level.</strong> The masterpiece of Imam ash-Shāṭibī on the seven canonical readings (qirā'āt), for students ready to go beyond a single narration.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>Fees</h3>
+      <p>The class is offered on a gift (hadiyyah) basis — this is discussed with the Shaykh directly. Please <a href="#contact">reach out</a> and he will be happy to speak with you.</p>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-dark" href="https://canva.link/9hy6hvvmbm5h17v" target="_blank" rel="noopener">View the class slides</a>
+      <a class="btn btn-primary" href="#contact">Contact the Shaykh to join</a>
+    </div>
   </div>
 </section>
 
 <section class="alt">
   <div class="container">
-    <h2 class="section-title">Our Programs</h2>
-    <p class="section-sub">Led personally by Shaykh Muhammad Abdelaziz.</p>
-    <div class="card-grid">
-      <div class="card program-card">
-        <img src="assets/summer-program-poster.jpeg" alt="Summer Qur'an Program poster">
-        <div class="program-body">
-          <h3>Summer Qur'an Program</h3>
-          <p>A full summer of Qur'an for children: memorization with a structured revision system, Tajweed, character building, and fun activities. Monday–Thursday, 9:00 AM–2:00 PM.</p>
-          <a class="btn btn-dark" href="summer-program.html">Learn more &amp; register</a>
-        </div>
-      </div>
-      <div class="card program-card">
-        <img src="assets/shaykh-muhammad-2.jpg" alt="Shaykh Muhammad Abdelaziz leading du'a">
-        <div class="program-body">
-          <h3>Adult Tajweed Classes</h3>
-          <p>Weekend drop-in classes for adults walking through Tuḥfat al-Aṭfāl, the classical Tajweed poem. Recite one-on-one to the Shaykh and perfect your recitation at your own pace.</p>
-          <a class="btn btn-dark" href="adult-classes.html">Learn more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
     <blockquote class="hadith">
       <p>&ldquo;Verily, I have only been sent to perfect righteous character.&rdquo;</p>
       <footer>Prophet Muhammad ﷺ — Musnad Aḥmad</footer>
     </blockquote>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-sub">Have a question about any of our programs? Reach out — Shaykh Muhammad personally calls every family who registers or asks a question.</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Phone</h3>
+        <p>Call or text us directly.</p>
+        <a class="btn btn-dark" href="tel:+12899950626">289-995-0626</a>
+      </div>
+      <div class="card">
+        <h3>Email</h3>
+        <p>Email Shaykh Muhammad and he will get back to you.</p>
+        <a class="btn btn-dark" href="mailto:daralquran.waalhikmah@gmail.com">Send an email</a>
+      </div>
+      <div class="card">
+        <h3>Visit</h3>
+        <p>3105 Dundas St W, Suite 201<br>Mississauga, ON</p>
+        <a class="btn btn-dark" href="https://maps.google.com/?q=3105+Dundas+St+W+Suite+201+Mississauga+ON" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem; border-radius:14px; overflow:hidden; box-shadow:0 4px 18px rgba(40,54,24,0.14);">
+      <iframe
+        src="https://maps.google.com/maps?q=3105%20Dundas%20St%20W%2C%20Mississauga%2C%20ON&t=&z=14&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="380" style="border:0; display:block;" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Map to Dar Al Quran Wal Hikmah"></iframe>
+    </div>
   </div>
 </section>
 
@@ -107,14 +257,22 @@
       <a href="mailto:daralquran.waalhikmah@gmail.com">daralquran.waalhikmah@gmail.com</a></p>
     </div>
     <div>
-      <h4>Programs</h4>
-      <p><a href="summer-program.html">Summer Qur'an Program</a><br>
-      <a href="adult-classes.html">Adult Tajweed Classes</a><br>
-      <a href="resources.html">Resources</a></p>
+      <h4>Quick Links</h4>
+      <p><a href="#summer">Summer Qur'an Program</a><br>
+      <a href="#adults">Adult Tajweed Classes</a><br>
+      <a href="#contact">Contact</a></p>
     </div>
     <p class="fine">&copy; 2026 Dar Al Quran Wal Hikmah — دار القرآن والحكمة</p>
   </div>
 </footer>
+
+<script>
+  // Close the mobile menu after tapping a nav link
+  const navToggle = document.getElementById('nav-toggle');
+  document.querySelectorAll('.site-nav a').forEach(link => {
+    link.addEventListener('click', () => { navToggle.checked = false; });
+  });
+</script>
 
 </body>
 </html>
