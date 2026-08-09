@@ -1,0 +1,2569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Muqaddimah Al-Jazariyyah — Tajweed Masterclass | Dar Al Quran Wal Hikmah</title>
+    <meta name="description" content="A 35-slide masterclass on Tajweed based on the poem of Imam Ibn Al-Jazari, presented by Dar Al Quran Wal Hikmah.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; }
+        
+        body {
+            background-color: #dcd9bd;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr;
+            margin: 0;
+            min-height: 100vh;
+            padding: 30px 0;
+            place-items: center;
+        }
+
+        .slide-container {
+            align-items: center;
+            background-color: #fefae0;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+            height: 720px;
+            justify-content: flex-start;
+            overflow: hidden;
+            padding: 35px 45px;
+            position: relative;
+            width: 1280px;
+        }
+
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(circle at 100% 0%, rgba(188, 108, 37, 0.05) 0%, transparent 40%),
+                              radial-gradient(circle at 0% 100%, rgba(40, 54, 24, 0.05) 0%, transparent 40%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .slide-container > * { position: relative; z-index: 1; }
+
+        h1, h2, h3 {
+            color: #283618;
+            font-family: 'Amiri', Georgia, serif;
+            margin: 0;
+        }
+
+        p, li, .subtitle, th, td { color: #24291c; }
+
+        h1 { font-size: 65px; text-align: center; line-height: 1.1; }
+        .slide-title { font-size: 38px; border-bottom: 3px solid #bc6c25; padding-bottom: 8px; margin-bottom: 20px; width: 100%; text-align: left; }
+        h3 { font-size: 24px; margin-bottom: 12px; color: #bc6c25; }
+        p, li, th, td { font-size: 17px; line-height: 1.4; }
+        
+        .subtitle { font-size: 22px; font-weight: 400; font-style: italic; text-align: center; margin-top: 15px; color: #55523f; }
+
+        .content-area {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 15px;
+            min-height: 0; 
+        }
+
+        .title-layout { text-align: center; align-self: center; display: flex; flex-direction: column; justify-content: center; height: 100%; }
+        
+        .section-title-layout { align-items: center; display: flex; flex-direction: column; height: 100%; justify-content: center; text-align: center; width: 100%; }
+        .section-title-layout h2 { font-size: 55px; margin-bottom: 20px; }
+        .section-title-layout hr { background-color: #bc6c25; border: none; height: 4px; margin: 30px auto; width: 150px; }
+
+        .two-column { align-items: stretch; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; width: 100%; height: 100%; }
+        .two-column.tiled { align-items: stretch; height: auto; }
+        .two-column.tiled > div { background-color: #fffef7; border-radius: 12px; border: 1px solid #e8dfc0; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .two-column ul { list-style: disc; margin: 0; padding-left: 25px; }
+        .two-column li { margin-bottom: 10px; }
+
+        .image-wrapper { border-radius: 12px; height: 260px; max-width: 100%; overflow: hidden; width: 100%; box-shadow: 0 4px 10px rgba(0,0,0,0.08); border: 2px solid #ddd3ad; }
+        .image-wrapper img { height: 100%; max-width: 100%; object-fit: cover; width: 100%; }
+        .two-column .image-wrapper img { object-fit: contain; background: #fffef7;}
+
+        .tiled-content { align-items: stretch; display: flex; gap: 20px; justify-content: center; width: 100%; height: auto; }
+        .tile { background-color: #fffef7; border-radius: 12px; border: 1px solid #e8dfc0; display: flex; flex-direction: column; flex: 1; padding: 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .tile .icon { color: #bc6c25; font-size: 35px; margin-bottom: 12px; }
+        
+        .image-tile { flex: 1; text-align: center; }
+        .image-tile .image-wrapper { height: 180px; margin-bottom: 12px; }
+
+        .highlight-numbers-layout > div:first-child { flex: 0 0 35%; text-align: center; }
+        .highlight-numbers-layout .number { color: #bc6c25; font-size: 110px; font-weight: 700; font-family: 'Amiri', Georgia, serif; line-height: 1; }
+        .highlight-numbers-layout .number-label { font-size: 22px; font-weight: 700; color: #283618;}
+
+        .quote-layout { margin: 0 auto; text-align: center; width: 90%; }
+        .quote-layout blockquote { color: #283618; font-size: 35px; font-weight: 600; font-family: 'Amiri', Georgia, serif; line-height: 1.4; margin: 0 0 20px 0; padding: 0 40px; position: relative; }
+        .quote-layout blockquote::before, .quote-layout blockquote::after { color: #bc6c25; content: '"'; font-size: 70px; line-height: 0; position: absolute; opacity: 0.3; }
+        .quote-layout blockquote::before { left: -10px; top: 30px; }
+        .quote-layout blockquote::after { bottom: 10px; right: -10px; }
+
+        .table-layout { width: 100%; margin: 0 auto; }
+        .table-layout table { border-collapse: collapse; width: 100%; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .table-layout th, .table-layout td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #e8dfc0; }
+        .table-layout th { background-color: #283618; color: #fefae0; font-size: 17px; font-weight: 700; font-family: 'Amiri', Georgia, serif; }
+        .table-layout tr:nth-child(even) td { background-color: #faedcd; }
+        .table-layout tr:last-child td { border-bottom: none; }
+        
+        .doughnut-chart-container { align-items: center; display: flex; gap: 60px; justify-content: center; width: 100%; }
+        .doughnut-chart { border-radius: 50%; height: 260px; width: 260px; border: 8px solid #fefae0; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .legend { display: flex; flex-direction: column; gap: 12px; list-style: none; margin: 0; padding: 0; }
+        .legend li { align-items: center; color: #24291c; display: flex; font-weight: bold; font-size: 16px; }
+        .legend .color-box { border-radius: 4px; height: 18px; margin-right: 12px; width: 18px; }
+
+        /* Poem Formatting with Hemistich Splitting */
+        .poem-footer {
+            background: linear-gradient(135deg, #283618 0%, #3c4f22 100%);
+            color: #faedcd;
+            width: 100%;
+            /* Increased top padding (28px) vs bottom padding (15px) for balanced verse alignment */
+            padding: 28px 25px 15px 25px; 
+            border-radius: 12px;
+            margin-top: auto;
+            flex-shrink: 0; 
+            box-shadow: 0 -4px 15px rgba(29, 39, 18, 0.25);
+            border-top: 3px solid #bc6c25;
+        }
+
+        .verse-row {
+            display: flex;
+            direction: rtl; /* Sets natural RTL flow for Arabic text so Shatr 1 is on the right */
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 10px;
+        }
+        
+        .verse-row:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .shatr {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+        }
+
+        .arabic-text {
+            font-family: 'Amiri', serif;
+            font-size: 21px;
+            color: #dda15e;
+            line-height: 1.4;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        .english-text {
+            font-size: 13px;
+            color: #e6e0c4;
+            font-style: italic;
+            direction: ltr; /* Ensure English is read LTR even within RTL container */
+            line-height: 1.3;
+            text-align: center;
+        }
+        
+        .term {
+            font-family: 'Amiri', serif;
+            font-size: 22px;
+            color: #bc6c25;
+            font-weight: bold;
+        }
+    
+    </style>
+
+    <!-- ===== Deck viewer chrome (Dar Al Quran Wal Hikmah palette) ===== -->
+    <style>
+        :root {
+            --forest: #283618;
+            --forest-lift: #3c4f22;
+            --olive: #606c38;
+            --cream: #fefae0;
+            --cream-deep: #faedcd;
+            --tan: #dda15e;
+            --earth: #bc6c25;
+            --ink: #24291c;
+            --ink-soft: #55523f;
+            --white: #fffef7;
+            --bar-h: 56px;
+        }
+
+        html, body { height: 100%; }
+
+        [hidden] { display: none !important; }
+
+        body {
+            background: radial-gradient(circle at 50% 0%, #35471f 0%, #283618 55%, #1d2712 100%);
+            display: block;
+            gap: 0;
+            margin: 0;
+            padding: 0;
+            place-items: initial;
+            overflow: hidden;
+            font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+        }
+
+        #viewport {
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            bottom: var(--bar-h);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .stage {
+            position: relative;
+            width: 1280px;
+            height: 720px;
+            flex: none;
+            transform-origin: center center;
+        }
+
+        /* Only the active slide is shown */
+        .stage > .slide-container {
+            position: absolute;
+            top: 0; left: 0;
+            margin: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease;
+        }
+        .stage > .slide-container.is-active { opacity: 1; visibility: visible; }
+
+        /* --- Edge arrows --- */
+        .edge-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 46px; height: 78px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(40, 54, 24, 0.55);
+            color: var(--cream);
+            font-size: 22px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s ease, background 0.2s ease;
+            z-index: 30;
+        }
+        #viewport:hover .edge-nav { opacity: 0.75; }
+        .edge-nav:hover { opacity: 1 !important; background: var(--earth); }
+        .edge-nav:focus-visible { opacity: 1; outline: 2px solid var(--tan); outline-offset: 2px; }
+        .edge-nav[disabled] { opacity: 0 !important; pointer-events: none; }
+        #prevEdge { left: 10px; }
+        #nextEdge { right: 10px; }
+
+        /* --- Bottom bar --- */
+        .deck-bar {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            height: var(--bar-h);
+            background: var(--forest);
+            color: var(--cream);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0 0.7rem;
+            box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.28);
+            z-index: 40;
+        }
+
+        .deck-progress {
+            position: absolute;
+            top: 0; left: 0;
+            height: 3px;
+            background: var(--tan);
+            transition: width 0.25s ease;
+        }
+
+        .deck-brand {
+            display: none;
+            font-family: "Amiri", Georgia, serif;
+            font-size: 0.95rem;
+            color: var(--cream);
+            text-decoration: none;
+            white-space: nowrap;
+            padding-right: 0.4rem;
+        }
+        .deck-brand:hover { color: var(--tan); }
+        @media (min-width: 900px) { .deck-brand { display: block; } }
+
+        .deck-btn {
+            appearance: none;
+            border: 1px solid rgba(254, 250, 224, 0.22);
+            background: transparent;
+            color: var(--cream);
+            border-radius: 8px;
+            height: 34px;
+            min-width: 34px;
+            padding: 0 0.6rem;
+            font-size: 0.9rem;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+        }
+        .deck-btn:hover { background: var(--earth); border-color: var(--earth); color: var(--white); }
+        .deck-btn[disabled] { opacity: 0.35; cursor: default; }
+        .deck-btn[disabled]:hover { background: transparent; border-color: rgba(254, 250, 224, 0.22); color: var(--cream); }
+        .deck-btn .label { display: none; }
+        @media (min-width: 620px) { .deck-btn .label { display: inline; } }
+
+        .deck-center {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+        }
+        .deck-title {
+            font-family: "Amiri", Georgia, serif;
+            font-size: 0.98rem;
+            color: var(--cream);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 46vw;
+        }
+        .deck-count {
+            font-variant-numeric: tabular-nums;
+            font-size: 0.85rem;
+            color: var(--tan);
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .deck-right { display: flex; align-items: center; gap: 0.4rem; }
+
+        /* --- Overview --- */
+        #overview {
+            position: absolute;
+            inset: 0;
+            background: #1d2712;
+            z-index: 50;
+            display: none;
+            flex-direction: column;
+        }
+        #overview.open { display: flex; }
+        .ov-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.9rem 1.2rem;
+            border-bottom: 1px solid rgba(221, 161, 94, 0.28);
+            color: var(--cream);
+        }
+        .ov-head h2 { font-family: "Amiri", Georgia, serif; color: var(--cream); font-size: 1.15rem; margin: 0; }
+        .ov-grid {
+            flex: 1;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+            gap: 1rem;
+            padding: 1.2rem;
+            align-content: start;
+        }
+        .thumb {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+            color: var(--cream);
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .thumb-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 2px solid rgba(221, 161, 94, 0.3);
+            background: var(--cream);
+            transition: border-color 0.15s ease, transform 0.15s ease;
+        }
+        .thumb:hover .thumb-frame { border-color: var(--tan); transform: translateY(-2px); }
+        .thumb.current .thumb-frame { border-color: var(--tan); box-shadow: 0 0 0 3px rgba(221, 161, 94, 0.35); }
+        .thumb-inner {
+            position: absolute;
+            top: 0; left: 0;
+            width: 1280px;
+            height: 720px;
+            transform-origin: top left;
+            pointer-events: none;
+        }
+        .thumb-inner .slide-container {
+            position: absolute;
+            top: 0; left: 0;
+            margin: 0;
+            opacity: 1 !important;
+            visibility: visible !important;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        .thumb-label {
+            font-size: 0.82rem;
+            line-height: 1.35;
+            color: #e8e2c4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .thumb-label b { color: var(--tan); font-variant-numeric: tabular-nums; }
+
+        /* --- Help hint --- */
+        .deck-hint {
+            position: absolute;
+            bottom: calc(var(--bar-h) + 12px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(29, 39, 18, 0.9);
+            color: #e8e2c4;
+            border: 1px solid rgba(221, 161, 94, 0.3);
+            border-radius: 999px;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.8rem;
+            z-index: 35;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+        .deck-hint kbd {
+            background: rgba(221, 161, 94, 0.2);
+            border-radius: 4px;
+            padding: 0 0.3rem;
+            font-family: inherit;
+        }
+        .deck-hint.hidden { opacity: 0; }
+
+        @media (max-width: 560px) {
+            .deck-title { display: none; }
+        }
+
+        /* --- Print: every slide, one per page --- */
+        @media print {
+            @page { size: 1280px 720px; margin: 0; }
+            body { background: #fff; overflow: visible; }
+            .deck-bar, #overview, .edge-nav, .deck-hint { display: none !important; }
+            #viewport { position: static; display: block; overflow: visible; }
+            .stage { position: static; width: auto; height: auto; transform: none !important; }
+            .stage > .slide-container {
+                position: static;
+                opacity: 1 !important;
+                visibility: visible !important;
+                box-shadow: none;
+                border-radius: 0;
+                break-after: page;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="viewport">
+  <div class="stage" id="stage">
+
+  <!-- Slide 1: Title_Slide -->
+  <div class="slide-container" id="slide1">
+      <div class="title-layout">
+          <i class="fa-solid fa-book-quran" style="font-size: 80px; color: #bc6c25; margin-bottom: 30px;"></i>
+          <h1>Al-Muqaddimah Al-Jazariyyah</h1>
+          <p class="subtitle">A Comprehensive Masterclass on <span class="term">تَجْوِيد</span> (Tajweed)</p>
+          <hr style="background-color: #bc6c25; border: none; height: 3px; margin: 30px auto; width: 100px;">
+          <p style="font-size: 20px; max-width: 800px; margin: 0 auto; color: #55523f;">In-depth theoretical foundations and practical application based on the renowned poem by Imam Muhammad Ibn Al-Jazari Ash-Shafi'i.</p>
+      </div>
+  </div>
+
+  <!-- Slide 2: Introduction -->
+  <div class="slide-container" id="slide2">
+      <h2 class="slide-title">الْمُقَدِّمَة (The Introduction)</h2>
+      <div class="content-area">
+          <div class="tiled-content">
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-pen-nib"></i></div>
+                  <h3>الْمُؤَلِّف (The Author)</h3>
+                  <p>The poem begins with a humble introduction of the author, Imam Ibn Al-Jazari, seeking the forgiveness of Allah.</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-hands-praying"></i></div>
+                  <h3>الْحَمْد وَالصَّلَاة (Praise & Salutations)</h3>
+                  <p>Acknowledging that all praise belongs to Allah, followed by sending peace upon Prophet Muhammad (ﷺ).</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-users"></i></div>
+                  <h3>الصَّحَابَة (The Companions)</h3>
+                  <p>Extending the salutations to the Prophet's family, companions, and those who recite and love the Quran.</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">يَقُولُ رَاجِي عَفْوِ رَبٍّ سَامِعِ</div>
+                  <div class="english-text">The one hoping for the pardon of a Hearing Lord says</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">مُحَمَّدُ بْنُ الْجَزَرِيِّ الشَّافِعِي</div>
+                  <div class="english-text">Muhammad, the son of Al-Jazari, the Shafi'i.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">الْحَمْدُ لِلَّهِ وَصَلَّى اللَّهُ</div>
+                  <div class="english-text">Praise be to Allah, and may Allah exalt the mention of</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">عَلَى نَبِيِّهِ وَمُصْطَفَاهُ</div>
+                  <div class="english-text">His Prophet and Chosen one.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">مُحَمَّدٍ وَآلِهِ وَصَحْبِهِ</div>
+                  <div class="english-text">Muhammad, his family, his companions</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَمُقْرِئِ الْقُرْآنِ مَعْ مُحِبِّهِ</div>
+                  <div class="english-text">and the teacher of the Quran along with its lover.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 3: Obligation of Tajweed 1 -->
+  <div class="slide-container" id="slide3">
+      <h2 class="slide-title">الْوُجُوب (The Obligation of Knowledge) - Part 1</h2>
+      <div class="content-area">
+          <div class="two-column highlight-numbers-layout">
+              <div>
+                  <div class="number">1st</div>
+                  <div class="number-label" style="margin-top: 10px;">Primary Duty</div>
+              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center;">
+                  <h3>The Prerequisite to Recitation</h3>
+                  <p>Before embarking on the recitation of the Quran, Imam Al-Jazari states it is an absolute obligation to acquire foundational knowledge.</p>
+                  <ul style="margin-top: 10px;">
+                      <li><strong><span class="term">مَخَارِج</span> (Articulation Points):</strong> Where letters originate.</li>
+                      <li><strong><span class="term">صِفَات</span> (Characteristics):</strong> The inherent qualities of letters.</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَبَعْدُ إِنَّ هَذِهِ مُقَدِّمَهْ</div>
+                  <div class="english-text">And thereafter: This is an introduction</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">فِيمَا عَلَى قَارِئِهِ أَنْ يَعْلَمَهْ</div>
+                  <div class="english-text">regarding what its reciter must know.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">إِذْ وَاجِبٌ عَلَيْهِمُ مُحَتَّمُ</div>
+                  <div class="english-text">For it is an absolute obligation upon them</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">قَبْلَ الشُّرُوعِ أَوَّلاً أَنْ يَعْلَمُوا</div>
+                  <div class="english-text">before beginning (to recite), to first know:</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">مَخَارِجَ الْحُرُوفِ وَالصِّفَاتِ</div>
+                  <div class="english-text">The articulation points of the letters and the characteristics</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">لِيَلْفِظُوا بِأَفْصَحِ اللُّغَاتِ</div>
+                  <div class="english-text">so that they may pronounce with the most eloquent of languages.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 4: Obligation of Tajweed 2 -->
+  <div class="slide-container" id="slide4">
+      <h2 class="slide-title">الْوُجُوب (The Obligation of Knowledge) - Part 2</h2>
+      <div class="content-area">
+          <div class="tiled-content">
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                  <h3><span class="term">تَجْوِيد</span> (Tajweed)</h3>
+                  <p>Mastering the rules of recitation, giving every letter its due right and deserved characteristic.</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-hand"></i></div>
+                  <h3><span class="term">مَوَاقِف</span> (Stopping Places)</h3>
+                  <p>Knowing exactly where to pause to preserve the divine meaning.</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-scroll"></i></div>
+                  <h3><span class="term">رَسْم الْمُصْحَف</span> (Script of the Mushaf)</h3>
+                  <p>Understanding the Uthmani script, specifically cut/joined words and open/closed <span class="term">تَاء</span> (Taa).</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">مُحَرِّرِي التَّجْوِيدِ وَالْمَوَاقِفِ</div>
+                  <div class="english-text">Perfecting the Tajweed and the stopping places</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَمَا الَّذِي رُسِمَ فِي الْمَصَاحِفِ</div>
+                  <div class="english-text">and what was drawn (written) in the Mushafs:</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">مِنْ كُلِّ مَقْطُوعٍ وَمَوْصُولٍ بِهَا</div>
+                  <div class="english-text">Of every cut and joined (word) within them</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَتَاءِ أُنْثَى لَمْ تَكُنْ تُكْتَبْ بِهَا</div>
+                  <div class="english-text">and the feminine Taa that was not written with it (as closed).</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 5: Makharij Overview -->
+  <div class="slide-container" id="slide5">
+      <h2 class="slide-title"><span class="term">مَخَارِج الْحُرُوف</span> (Articulation Points of the Letters)</h2>
+      <div class="content-area">
+          <div class="doughnut-chart-container">
+              <div class="doughnut-chart" style="background: conic-gradient(#283618 0% 58.8%, #bc6c25 58.8% 70.6%, #dda15e 70.6% 82.4%, #606c38 82.4% 94.1%, #a3ad7a 94.1% 100%);"></div>
+              <ul class="legend">
+                  <li><div class="color-box" style="background-color: #283618;"></div>اللِّسَان (The Tongue) - 10 Points</li>
+                  <li><div class="color-box" style="background-color: #bc6c25;"></div>الْحَلْق (The Throat) - 3 Points</li>
+                  <li><div class="color-box" style="background-color: #dda15e;"></div>الشَّفَتَان (The Lips) - 2 Points</li>
+                  <li><div class="color-box" style="background-color: #606c38;"></div>الْجَوْف (The Empty Space) - 1 Point</li>
+                  <li><div class="color-box" style="background-color: #a3ad7a;"></div>الْخَيْشُوم (The Nasal Cavity) - 1 Point</li>
+              </ul>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">مَخَارِجُ الحُرُوفِ سَبْعَةَ عَشَرْ</div>
+                  <div class="english-text">The articulation points of the letters are seventeen</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">عَلَى الَّذِي يَخْتَارُهُ مَنِ اخْتَبَرْ</div>
+                  <div class="english-text">according to the opinion chosen by the one who tested (and investigated) it.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 6: Al Jawf and Al Halq 1 -->
+  <div class="slide-container" id="slide6">
+      <h2 class="slide-title"><span class="term">الْجَوْف</span> (The Empty Space) & <span class="term">الْحَلْق</span> (The Throat)</h2>
+      <div class="content-area">
+          <div class="two-column">
+              <div style="display: flex; flex-direction: column; justify-content: center;">
+                  <h3 style="color: #283618; margin-bottom: 5px;"><span class="term">الْجَوْف</span> (The Empty Space)</h3>
+                  <p>The empty space in the mouth and throat. It is the exit for the three letters of <span class="term">مَدّ</span> (Elongation): Alif (ا), Waw (و), and Yaa (ي) when <span class="term">سَاكِنَة</span> (Vowelless).</p>
+                  <h3 style="color: #283618; margin-top: 15px; margin-bottom: 5px;"><span class="term">الْحَلْق</span> (The Throat)</h3>
+                  <ul>
+                      <li><strong><span class="term">أَقْصَى الْحَلْق</span> (Deepest):</strong> Hamzah (ء) and Haa (هـ)</li>
+                      <li><strong><span class="term">وَسَط الْحَلْق</span> (Middle):</strong> 'Ayn (ع) and Haa (ح)</li>
+                  </ul>
+              </div>
+              <div>
+                  <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/4716376808798499873" alt="Vocal tract articulation diagram phonetics linguistics"></div>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">فَأَلِفُ الْجَوْفِ وَأُخْتَاهَا وَهِي</div>
+                  <div class="english-text">So for the empty space is Alif and its two sisters, and they</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">حُرُوفُ مَدٍّ لِلْهَوَاءِ تَنْتَهِي</div>
+                  <div class="english-text">are letters of elongation ending with the air.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">ثُمَّ لأَقْصَى الْحَلْقِ هَمْزٌ هَاءُ</div>
+                  <div class="english-text">Then for the deepest part of the throat is Hamzah and Haa</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">ثُمَّ لِوَسْطِهِ فَعَيْنٌ حَاءُ</div>
+                  <div class="english-text">Then for its middle is 'Ayn and Haa.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 7: Halq 2 & Deep Tongue -->
+  <div class="slide-container" id="slide7">
+      <h2 class="slide-title">Upper <span class="term">الْحَلْق</span> & <span class="term">أَقْصَى اللِّسَان</span> (Deepest Tongue)</h2>
+      <div class="content-area">
+          <div class="two-column">
+              <div>
+                  <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/8268640669105214426" alt="Human tongue anatomy diagram back middle tip"></div>
+              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center;">
+                  <h3 style="color: #283618; margin-bottom: 5px;"><span class="term">أَدْنَى الْحَلْق</span> (Closest Throat)</h3>
+                  <p>Ghayn (غ) and Khaa (خ) originate from the topmost part of the throat, closest to the mouth.</p>
+                  <h3 style="color: #283618; margin-top: 15px; margin-bottom: 5px;"><span class="term">أَقْصَى اللِّسَان</span> (Deepest Tongue)</h3>
+                  <p>Moving from the throat into the mouth, the very back of the tongue produces two letters by striking the upper palate.</p>
+                  <ul>
+                      <li><strong>Qaaf (ق):</strong> Produced from the deepest part, striking the soft palate.</li>
+                      <li><strong>Kaaf (ك):</strong> Produced slightly forward from the Qaaf (slightly lower).</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">أَدْنَاهُ غَيْنٌ خَاؤُهَا وَالْقَافُ</div>
+                  <div class="english-text">Its closest part is Ghayn and Khaa, and the Qaaf</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">أَقْصَى اللِّسَانِ فَوْقُ ثُمَّ الْكَافُ</div>
+                  <div class="english-text">is from the deepest part of the tongue, above. Then the Kaaf...</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 8: Middle & Edges of Tongue -->
+  <div class="slide-container" id="slide8">
+      <h2 class="slide-title"><span class="term">وَسَط اللِّسَان</span> (Middle) & <span class="term">حَافَّة اللِّسَان</span> (Edges)</h2>
+      <div class="content-area">
+          <div class="tiled-content">
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-comment-dots"></i></div>
+                  <h3><span class="term">وَسَط اللِّسَان</span> (Middle)</h3>
+                  <p><strong>Jeem (ج), Sheen (ش), Yaa (ي)</strong><br>Produced when the middle of the tongue rises to the hard palate.</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-teeth"></i></div>
+                  <h3><span class="term">حَافَّة اللِّسَان</span> (Sides)</h3>
+                  <p><strong>Dhaad (ض)</strong><br>Produced from the side of the tongue touching the upper molars (left, right, or both).</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-arrows-left-right"></i></div>
+                  <h3>Edge to Tip</h3>
+                  <p><strong>Laam (ل)</strong><br>Produced from the edges of the tongue up to its tip, touching the upper gums.</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">أَسْفَلُ وَالْوَسْطُ فَجِيمُ الشِّينُ يَا</div>
+                  <div class="english-text">...is lower. And the middle (of the tongue) is Jeem, Sheen, and Yaa</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَالضَّادُ مِنْ حَافَتِهِ إِذْ وَلِيَا</div>
+                  <div class="english-text">And the Dhaad is from its edge when it lies against...</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">الاَضْرَاسَ مِنْ أَيْسَرَ أَوْ يُمْنَاهَا</div>
+                  <div class="english-text">The molars, from its left or right side</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَاللاَّمُ أَدْنَاهَا لِمُنْتَهَاهَا</div>
+                  <div class="english-text">And the Laam is from its nearest edge to its end (tip).</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 9: Tip of the Tongue 1 -->
+  <div class="slide-container" id="slide9">
+      <h2 class="slide-title"><span class="term">طَرَف اللِّسَان</span> (Tip of the Tongue) - Part 1</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th style="width: 20%;">Letter</th>
+                          <th style="width: 40%;">Arabic</th>
+                          <th>Exact <span class="term">مَخْرَج</span> (Articulation Point)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>Noon</strong></td>
+                          <td style="font-size: 24px;">ن</td>
+                          <td>From the tip of the tongue and the gums of the upper two front teeth, slightly below the Laam.</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Raa</strong></td>
+                          <td style="font-size: 24px;">ر</td>
+                          <td>From the tip of the tongue and the upper gums, but the back (top) of the tip curves closer to the palate.</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَالنُّونُ مِنْ طَرَفِهِ تَحْتُ اجْعَلُوا</div>
+                  <div class="english-text">And make the Noon from its tip, slightly below (the Laam)</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَالرَّا يُدَانِيهِ لِظَهْرٍ أَدْخَلُوا</div>
+                  <div class="english-text">And the Raa is close to it, but utilizing the back (top) of the tongue more.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 10: Tip of the Tongue 2 -->
+  <div class="slide-container" id="slide10">
+      <h2 class="slide-title"><span class="term">طَرَف اللِّسَان</span> (Tip of the Tongue) - Part 2</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Category</th>
+                          <th>Letters</th>
+                          <th>Interaction Point</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong><span class="term">النَّطْعِيَّة</span> (Palatal)</strong></td>
+                          <td style="font-size: 24px; font-family: 'Amiri', serif;">ط ، د ، ت</td>
+                          <td>Tip of the tongue touching the roots of the upper two front teeth.</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">الأَسَلِيَّة</span> (Tip)</strong></td>
+                          <td style="font-size: 24px; font-family: 'Amiri', serif;">ص ، ز ، س</td>
+                          <td>Tip of the tongue slightly behind the lower incisors.</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">اللِّثَوِيَّة</span> (Gum)</strong></td>
+                          <td style="font-size: 24px; font-family: 'Amiri', serif;">ظ ، ذ ، ث</td>
+                          <td>Tip of the tongue touching the edges of the upper two front teeth.</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَالطَّاءُ وَالدَّالُ وَتَا مِنْهُ وَمِنْ</div>
+                  <div class="english-text">And Taa, Daal, and Taa are from it (the tip) and from</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">عُلْيَا الثَّنَايَا وَالصَّفِيرُ مُسْتَكِنْ</div>
+                  <div class="english-text">the upper incisors. And the whistling letters rest...</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">مِنْهُ وَمِنْ فَوْقِ الثَّنَايَا السُّفْلَى</div>
+                  <div class="english-text">From it (the tip) and just above the lower incisors</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَالظَّاءُ وَالذَّالُ وَثَا لِلْعُلْيَا</div>
+                  <div class="english-text">And the Dhaa, Thaal, and Thaa are for the (edges of the) upper (incisors).</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 11: Lips and Nasal Cavity -->
+  <div class="slide-container" id="slide11">
+      <h2 class="slide-title"><span class="term">الشَّفَتَان</span> (The Lips) & <span class="term">الْخَيْشُوم</span> (The Nasal Cavity)</h2>
+      <div class="content-area">
+          <div class="two-column tiled">
+              <div>
+                  <h3 style="color: #283618;"><span class="term">الشَّفَتَان</span> (The Lips)</h3>
+                  <p><strong>Faa (ف):</strong> Inside of the lower lip against the edges of the upper front teeth.</p>
+                  <p><strong>Waw (و), Baa (ب), Meem (م):</strong> Produced by both lips together.</p>
+              </div>
+              <div>
+                  <h3 style="color: #283618;"><span class="term">الْخَيْشُوم</span> (The Nasal Cavity)</h3>
+                  <p>The empty space in the nose connecting to the back of the throat.</p>
+                  <p>This is the exit point solely for the <strong><span class="term">غُنَّة</span> (Nasalization)</strong>, an innate characteristic of the letters Noon (ن) and Meem (م).</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">مِنْ طَرَفَيْهِمَا وَمِنْ بَطْنِ الشَّفَهْ</div>
+                  <div class="english-text">From their edges (tongue tip & upper teeth). And from the belly of the (lower) lip</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">فَالْفَا مَعَ اطْرافِ الثَّنَايَا المُشْرِفَهْ</div>
+                  <div class="english-text">is the Faa, with the edges of the upper incisors.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">لِلشَّفَتَيْنِ الْوَاوُ بَاءٌ مِيمُ</div>
+                  <div class="english-text">For the two lips are the Waw, Baa, and Meem</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَغُنَّةٌ مَخْرَجُهَا الخَيْشُومُ</div>
+                  <div class="english-text">And the Ghunnah, its articulation point is the nasal cavity.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 12: Sifaat Overview -->
+  <div class="slide-container" id="slide12">
+      <h2 class="slide-title"><span class="term">صِفَات</span> (Characteristics) With Opposites</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th style="width: 25%;">Characteristic</th>
+                          <th style="width: 25%;">Meaning</th>
+                          <th style="width: 25%;">Opposite</th>
+                          <th style="width: 25%;">Meaning</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong><span class="term">هَمْس</span> (Whisper)</strong></td>
+                          <td>Breath flows</td>
+                          <td><strong><span class="term">جَهْر</span> (Audibility)</strong></td>
+                          <td>Breath stopped</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">شِدَّة</span> (Stiffness)</strong></td>
+                          <td>Sound stopped</td>
+                          <td><strong><span class="term">رَخَاوَة</span> (Softness)</strong></td>
+                          <td>Sound flows</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">اِسْتِعْلَاء</span> (Elevation)</strong></td>
+                          <td>Heavy</td>
+                          <td><strong><span class="term">اِسْتِفَال</span> (Lowering)</strong></td>
+                          <td>Light</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">إِطْبَاق</span> (Adhesion)</strong></td>
+                          <td>Enclosed</td>
+                          <td><strong><span class="term">اِنْفِتَاح</span> (Openness)</strong></td>
+                          <td>Separated</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">صِفَاتُهَا جَهْرٌ وَرِخْوٌ مُسْتَفِلْ</div>
+                  <div class="english-text">Its characteristics are Jahr, Rakhw, Mustafil</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">مُنْفَتِحٌ مُصْمَتَةٌ وَالضِّدَّ قُلْ</div>
+                  <div class="english-text">Munfatih, Musmatah - and say the opposites.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">مَهْمُوسُهَا (فَحَثَّهُ شَخْصٌ سَكَتْ)</div>
+                  <div class="english-text">Its whispered (Hams) are: (fa hath-thahu shakhsun sakat)</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">شَدِيدُهَا لَفْظُ (أَجِدْ قَطٍ بَكَتْ)</div>
+                  <div class="english-text">Its stiff (Shiddah) are the wording: (ajid qatin bakat).</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 13: Sifaat Continuation -->
+  <div class="slide-container" id="slide13">
+      <h2 class="slide-title">Elevation, Adhesion & Fluency</h2>
+      <div class="content-area">
+          <div class="tiled-content">
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                  <h3><span class="term">تَوَسُّط</span> (Moderation)</h3>
+                  <p>Between stiffness and softness is moderation: <br><span style="font-family:'Amiri'; font-size: 22px; font-weight:bold;">لِنْ عُمَرْ</span></p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-arrow-up"></i></div>
+                  <h3><span class="term">اِسْتِعْلَاء</span> (Elevation)</h3>
+                  <p>The 7 heavy letters where the tongue rises: <br><span style="font-family:'Amiri'; font-size: 22px; font-weight:bold;">خُصَّ ضَغْطٍ قِظْ</span></p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-compress"></i></div>
+                  <h3><span class="term">إِطْبَاق</span> (Adhesion)</h3>
+                  <p>The 4 extremely heavy, adhered letters: <br><span style="font-family:'Amiri'; font-size: 22px; font-weight:bold;">ص ، ض ، ط ، ظ</span></p>
+              </div>
+          </div>
+          <p style="text-align: center; margin-top: 10px;"><em>The <span class="term">إِذْلَاق</span> (Fluency) letters are gathered in: <strong>فِرَّ مِنْ لُبِّ</strong></em></p>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَبَيْنَ رِخْوٍ وَالشَّدِيدِ (لِنْ عُمَرْ)</div>
+                  <div class="english-text">And between the soft and the stiff is: (lin 'umar)</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَسَبْعُ عُلْوٍ (خُصَّ ضَغْطٍ قِظْ) حَصَرْ</div>
+                  <div class="english-text">And the seven of elevation are restricted in: (khussa daghtin qidh).</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَصَادُ ضَادٌ طَاءُ ظَاءٌ مُطْبَقَهْ</div>
+                  <div class="english-text">And Saad, Dhaad, Taa, and Dhaa are the adhered (Mutbaqah) letters</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَفِرَّ مِنْ لُبِّ الحُرُوفُ المُذْلَقَهْ</div>
+                  <div class="english-text">And (firra min lubbi) are the fluent (Mudlaqah) letters.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 14: Sifaat without Opposites -->
+  <div class="slide-container" id="slide14">
+      <h2 class="slide-title"><span class="term">صِفَات</span> (Characteristics) without Opposites</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th style="width: 25%;">Characteristic</th>
+                          <th style="width: 45%;">Meaning</th>
+                          <th style="width: 30%;">Letters</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong><span class="term">صَفِير</span> (Whistling)</strong></td>
+                          <td>A sound resembling a bird's whistle.</td>
+                          <td style="font-family: 'Amiri', serif; font-size: 24px;">ص ، ز ، س</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">قَلْقَلَة</span> (Echo)</strong></td>
+                          <td>A strong reverberation when the letter is <span class="term">سَاكِنَة</span>.</td>
+                          <td style="font-family: 'Amiri', serif; font-size: 24px;">قُطْبُ جَدٍّ</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">لِين</span> (Softness)</strong></td>
+                          <td>Ease of pronunciation without force.</td>
+                          <td>Waw (و) & Yaa (ي) <span class="term">سَاكِنَة</span> preceded by <span class="term">فَتْحَة</span></td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">اِنْحِرَاف</span> & <span class="term">تَكْرِير</span></strong></td>
+                          <td>Deviation (Laam/Raa) and Repetition (Raa only).</td>
+                          <td style="font-family: 'Amiri', serif; font-size: 24px;">ل ، ر</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">صَفِيرُهَا صَادٌ وَزَايٌ سِينُ</div>
+                  <div class="english-text">Its whistling (Safeer) is Saad, Zaay, and Seen</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">قَلْقَلَةٌ قُطْبُ جَدٍّ وَاللِّينُ</div>
+                  <div class="english-text">Qalqalah is (qutbu jaddin). And the Leen...</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَاوٌ وَيَاءٌ سَكَنَا وَانْفَتَحَا</div>
+                  <div class="english-text">Are Waw and Yaa when they are Saakin and preceded by Fathah</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">قَبْلَهُمَا وَالاِنْحِرَافُ صُحِّحَا</div>
+                  <div class="english-text">And Deviation (Inhiraf) is established...</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">فِي اللاَّمِ وَالرَّا وَبِتَكْرِيرٍ جُعِلْ</div>
+                  <div class="english-text">In the Laam and the Raa, and (the Raa) is made with Repetition (Takreer)</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَلِلتَّفَشِّي الشِّينُ ضَادًا اسْتُطِلْ</div>
+                  <div class="english-text">And for Diffusion (Tafash-shee) is the Sheen, and the Dhaad is Elongated (Istitaalah).</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 15: Obligation of Tajweed -->
+  <div class="slide-container" id="slide15">
+      <h2 class="slide-title">The Necessity of <span class="term">تَجْوِيد</span> (Tajweed)</h2>
+      <div class="content-area">
+          <div class="quote-layout">
+              <blockquote>Applying Tajweed is an absolute obligation; whoever does not correct the Quran is a sinner.</blockquote>
+              <p style="font-size: 22px; margin-top: 30px; font-style: italic; color: #55523f;">Because with it (Tajweed) Allah revealed it, and thus from Him it reached us.</p>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَالأَخْذُ بِالتَّجْوِيدِ حَتْمٌ لازِمُ</div>
+                  <div class="english-text">And applying Tajweed is an absolute obligation</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">مَنْ لَمْ يُجَوِّدِ الْقُرَآنَ آثِمُ</div>
+                  <div class="english-text">Whoever does not correct the Quran is a sinner.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">لأَنَّهُ بِهِ الإِلَهُ أَنْزَلاَ</div>
+                  <div class="english-text">Because with it, the God revealed it</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَهَكَذَا مِنْهُ إِلَيْنَا وَصَلاَ</div>
+                  <div class="english-text">and exactly like that, it reached us from Him.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَهُوَ أَيْضًا حِلْيَةُ التِّلاَوَةِ</div>
+                  <div class="english-text">And it is also the adornment of recitation</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَزِينَةُ الأَدَاءِ وَالْقِرَاءَةِ</div>
+                  <div class="english-text">and the embellishment of performance and reading.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 16: Practical Application -->
+  <div class="slide-container" id="slide16">
+      <h2 class="slide-title">The Essence of Practice</h2>
+      <div class="content-area">
+          <div class="two-column tiled">
+              <div>
+                  <h3 style="color: #283618;"><i class="fa-solid fa-scale-balanced" style="color: #bc6c25; margin-right: 10px;"></i><span class="term">حَقّ</span> (Inherent Right)</h3>
+                  <p>Tajweed involves giving every letter its inherent right (<span class="term">حَقّ</span>) and its deserved characteristic (<span class="term">مُسْتَحَقّ</span>) based on context.</p>
+              </div>
+              <div>
+                  <h3 style="color: #283618;"><i class="fa-solid fa-ear-listen" style="color: #bc6c25; margin-right: 10px;"></i>Gentleness</h3>
+                  <p>Pronouncing the letters with gentleness and ease, avoiding harshness, strain, or forced artificiality in speech.</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 18px 25px 5px 25px;">
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَهُوَ إِعْطَاءُ الْحُرُوفِ حَقَّهَا</div>
+                  <div class="english-text" style="font-size: 11px;">And it is giving the letters their due right</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">مِنْ صِفَةٍ لَهَا وَمُسْتَحَقَّهَا</div>
+                  <div class="english-text" style="font-size: 11px;">of every characteristic they possess, and their deserved right.</div>
+              </div>
+          </div>
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَرَدُّ كُلِّ وَاحِدٍ لأَصْلِهِ</div>
+                  <div class="english-text" style="font-size: 11px;">And returning each one to its origin</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَاللَّفْظُ فِي نَظِيرِهِ كَمِثْلِهِ</div>
+                  <div class="english-text" style="font-size: 11px;">and pronouncing its counterpart similarly.</div>
+              </div>
+          </div>
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">مُكَمَّلاً مِنْ غَيْرِ مَا تَكَلُّفِ</div>
+                  <div class="english-text" style="font-size: 11px;">Completed without any artificiality</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">بِاللُّطْفِ فِي النُّطْقِ بِلاَ تَعَسُّفِ</div>
+                  <div class="english-text" style="font-size: 11px;">with gentleness in pronunciation without harshness.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَلَيْسَ بَيْنَهُ وَبَيْنَ تَرْكِهِ</div>
+                  <div class="english-text" style="font-size: 11px;">And there is nothing between it and leaving it</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">إِلاَّ رِيَاضَةُ امْرِئٍ بِفَكِّهِ</div>
+                  <div class="english-text" style="font-size: 11px;">except a person's exercise with their jaw.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 17: Tafkheem & Tarqeeq Light letters -->
+  <div class="slide-container" id="slide17">
+      <h2 class="slide-title"><span class="term">تَرْقِيق</span> (Thinning)</h2>
+      <div class="content-area">
+          <div class="tiled-content">
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-feather"></i></div>
+                  <h3><span class="term">اِسْتِفَال</span> (Lowering)</h3>
+                  <p>All lowered letters must be pronounced thinly (<span class="term">تَرْقِيق</span>). Do not mix them with heavy letters (<span class="term">تَفْخِيم</span>).</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                  <h3>The Alif</h3>
+                  <p>Take immense care not to make the Alif heavy when it follows a light letter. It follows the letter <strong>before</strong> it.</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">فَرَقِّقَنْ مُسْتَفِلاً مِنْ أَحْرُفِ</div>
+                  <div class="english-text">So always thin (Tarqeeq) the lowered (Mustafil) letters</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَحَاذِرَنْ تَفْخِيمَ لَفْظِ الأَلِفِ</div>
+                  <div class="english-text">And beware of making the pronunciation of Alif heavy.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَهَمْزَ اَلْحَمْدِ أَعُوذُ إِهْدِنَا</div>
+                  <div class="english-text">And (thin) the Hamzah of 'Al-Hamd', 'A'oodhu', 'Ihdina', 'Allah'</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">اللَّهِ ثُمَّ لاَمَ لِلَّهِ لَنَا</div>
+                  <div class="english-text">then the Laam of 'Lillahi', 'Lana'.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 18: Warnings Hamzah & Alif -->
+  <div class="slide-container" id="slide18">
+      <h2 class="slide-title">Preserving <span class="term">تَرْقِيق</span> (Thinning) in Context</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Letter to Protect</th>
+                          <th style="text-align: right;">Example Word (Arabic)</th>
+                          <th>Reason for Caution</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>Laam (ل)</strong></td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 26px;">وَلْيَتَلَطَّفْ ، وَعَلَى اللَّهِ</td>
+                          <td>Must be kept thin before a heavy letter like Taa (ط) or when adjacent to the heavy name of Allah.</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Meem (م)</strong></td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 26px;">مَخْمَصَةٍ ، مَرَضٍ</td>
+                          <td>Often mistakenly made heavy when preceding Khaa (خ) or Raa (ر).</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَلْيَتَلَطَّفْ وَعَلَى اللَّهِ وَلاَ</div>
+                  <div class="english-text">And (thin the Laam of) 'Walyatalattaf' and 'Wa 'ala Allahi', and 'Wa laa-Dhaalliin'</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">الضَّ مَعْ مَخْمَصَةٍ وَمِنْ مَرَضْ</div>
+                  <div class="english-text">and (the Meem) in 'Makhmasatin' and 'Marad'.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَبَاءَ بَرْقٍ بَاطِلٍ بِهِمْ بِذِي</div>
+                  <div class="english-text">And the Baa of 'Barq', 'Baatil', 'Bihim', 'Bidhee'</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَاحْرِصْ عَلَى الشِّدَّةِ وَالْجَهْرِ الَّذِي</div>
+                  <div class="english-text">And be careful to maintain the Stiffness and Audibility which...</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 19: Warnings Baa, Meem, Waw -->
+  <div class="slide-container" id="slide19">
+      <h2 class="slide-title">Protecting <span class="term">شِدَّة</span> (Stiffness) & <span class="term">جَهْر</span> (Audibility)</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Rule to Apply</th>
+                          <th style="text-align: right;">Example (Arabic)</th>
+                          <th>Explanation</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Maintain <strong><span class="term">شِدَّة</span> & <span class="term">جَهْر</span></strong></td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 26px;">حُبِّ ، الصَّبْرِ</td>
+                          <td>In Baa (ب) and Jeem (ج), sound and breath must be blocked to prevent them from sounding soft.</td>
+                      </tr>
+                      <tr>
+                          <td>Clarify <strong><span class="term">قَلْقَلَة</span> (Echo)</strong></td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 26px;">رَبْوَةٍ ، اِجْتُثَّتْ</td>
+                          <td>Make the echo strong, especially when stopping on a Qalqalah letter.</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">فِيهَا وَفِي الْجِيمِ كَحُبِّ الصَّبْرِ</div>
+                  <div class="english-text">...is in it (the Baa) and the Jeem, like 'Hubbi', 'As-Sabri'</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">رَبْوَةٍ اجْتُثَّتْ وَحَجِّ الْفَجْرِ</div>
+                  <div class="english-text">'Rabwatin', 'Ujtuth-that', 'Hajj', 'Al-Fajr'.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَبَيِّنَنْ مُقَلْقَلاً إِنْ سَكَنَا</div>
+                  <div class="english-text">And clearly demonstrate the Qalqalah if it is Saakin</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَإِنْ يَكُنْ فِي الْوَقْفِ كَانَ أَبْيَنَا</div>
+                  <div class="english-text">And if it occurs at a stop, it should be even clearer.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَحَاءَ حَصْحَصَ أَحَطْتُ الْحَقُّ</div>
+                  <div class="english-text">And (clarify) the Haa of 'Hashasa', 'Ahattu', 'Al-Haqq'</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَسِينَ مُسْتَقِيمِ يَسْطُو يَسْقُو</div>
+                  <div class="english-text">And the Seen of 'Mustaqeem', 'Yastoo', 'Yasqoo'.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 20: Ahkaam Al-Raa -->
+  <div class="slide-container" id="slide20">
+      <h2 class="slide-title">Rules of the Letter Raa (أحكام الراء)</h2>
+      <div class="content-area">
+          <div class="tiled-content">
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-circle-down"></i></div>
+                  <h3><span class="term">تَرْقِيق</span> (Light)</h3>
+                  <p>The Raa is made light when it has a <span class="term">كَسْرَة</span> (Kasrah).</p>
+                  <p>Also light if <span class="term">سَاكِنَة</span>, preceded by Kasrah, and <strong>not</strong> followed by an elevated letter.</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-ban"></i></div>
+                  <h3><span class="term">تَكْرِير</span> (Repetition)</h3>
+                  <p>Hide (suppress) the repetitive trilling nature of the Raa, especially when it carries a <span class="term">شَدَّة</span> (Shaddah).</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَرَقِّقِ الرَّاءَ إِذَا مَا كُسِرَتْ</div>
+                  <div class="english-text">And make the Raa light when it is vowelled with a Kasrah</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">كَذَاكَ بَعْدَ الْكَسْرِ حَيْثُ سَكَنَتْ</div>
+                  <div class="english-text">Likewise, after a Kasrah when it is Saakin.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">إِنْ لَمْ تَكُنْ مِنْ قَبْلِ حَرْفِ اسْتِعْلاَ</div>
+                  <div class="english-text">Provided it is not before a letter of elevation</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">أَوْ كَانَتِ الْكَسْرَةُ لَيْسَتْ أَصْلاَ</div>
+                  <div class="english-text">or if the Kasrah is not original.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَالْخُلْفُ فِي فِرْقٍ لِكَسْرٍ يُوجَدُ</div>
+                  <div class="english-text">And there is difference of opinion in 'Firq' because of the Kasrah present</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَأَخْفِ تَكْرِيرًا إِذَا تُشَدَّدُ</div>
+                  <div class="english-text">And hide the repetition when it is doubled (Shaddah).</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 21: Ahkaam Al-Laam & Itbaaq -->
+  <div class="slide-container" id="slide21">
+      <h2 class="slide-title">Rules of Laam & Preserving <span class="term">إِطْبَاق</span> (Adhesion)</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th style="width: 30%;">Concept</th>
+                          <th>Rule Application</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>Laam in Allah's Name</strong></td>
+                          <td>Make the Laam of 'Allah' heavy (<span class="term">تَفْخِيم</span>) if preceded by a <span class="term">فَتْحَة</span> (Fathah) or <span class="term">ضَمَّة</span> (Dammah).</td>
+                      </tr>
+                      <tr>
+                          <td><strong>Preserving <span class="term">إِطْبَاق</span></strong></td>
+                          <td>The extreme heaviness of Taa (ط), Dhaad (ض), Saad (ص), and Dhaa (ظ) makes them stronger than mere elevated letters.</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَفَخِّمِ اللاَّمَ مِنِ اسْمِ اللَّهِ</div>
+                  <div class="english-text">And make the Laam heavy in the name of 'Allah'</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">عَنْ فَتْحٍ اوْ ضَمٍّ كَعَبْدُ اللَّهِ</div>
+                  <div class="english-text">following a Fathah or Dammah, like 'Abdu-llah'.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَحَرْفَ الاِسْتِعْلاَءِ فَخِّمْ وَاخْصُصَا</div>
+                  <div class="english-text">And make the letters of elevation heavy, and specifically</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">الاِطْبَاقَ أَقْوَى نَحْوُ قَالَ وَالْعَصَا</div>
+                  <div class="english-text">make Itbaaq stronger, like in 'Qaala' and 'Al-Asaa'.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَبَيِّنِ الإِطْبَاقَ مِنْ أَحَطتُّ مَعْ</div>
+                  <div class="english-text">And make the Itbaaq clear in 'Ahattu' along with</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">بَسَطتَّ وَالْخُلْفُ بِنَخْلُقكُّمْ وَقَعْ</div>
+                  <div class="english-text">'Basatta'. And a difference of opinion occurred in 'Nakhluqkum'.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 22: Idghaam -->
+  <div class="slide-container" id="slide22">
+      <h2 class="slide-title"><span class="term">إِدْغَام</span> (Merging)</h2>
+      <div class="content-area">
+          <div class="tiled-content">
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-object-group"></i></div>
+                  <h3><span class="term">مُتَمَاثِلَيْن</span> (Two Identical Letters)</h3>
+                  <p>Merging two <strong>identical</strong> letters where the first is <span class="term">سَاكِنَة</span>. Mandatory to merge.</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-link"></i></div>
+                  <h3><span class="term">مُتَجَانِسَيْن</span> (Two Similar Letters)</h3>
+                  <p>Merging two letters that share the <strong>same Makhraj</strong> but have different Sifaat (e.g., Taa into Daal).</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                  <h3>Caution: <span class="term">إِظْهَار</span> (Clarity)</h3>
+                  <p>Do NOT merge if the first letter is a Madd letter to preserve the elongation.</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَاحْرِصْ عَلَى السُّكُونِ فِي جَعَلْنَا</div>
+                  <div class="english-text">And be careful (to show) the Sukoon in 'Ja'alnaa'</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">أَنْعَمْتَ وَالْمَغْضُوبِ مَعْ ضَلَلْنَا</div>
+                  <div class="english-text">'An'amta', 'Al-Maghdoob' along with 'Dalalnaa'.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَخَلِّصِ انْفِتَاحَ مَحْذُورًا عَسَى</div>
+                  <div class="english-text">And clarify the openness of 'Mahdhooran' and 'Asaa'</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">خَوْفَ اشْتِبَاهِهِ بِمَحْظُورًا عَصَى</div>
+                  <div class="english-text">fearing confusion with 'Mahdhooran' and 'Asaa' (heavy versions).</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَأَدْغِمْ كَطَاءِ مَعْ دَالٍ وَتَا</div>
+                  <div class="english-text">And merge like Taa with Daal and Taa</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَقُلْ نَعَمْ وَسَبِّحْهُ لاَ تُزِغْ قُلُوبَ</div>
+                  <div class="english-text">And (make clear) 'Qul Na'am' and 'Sabbih-hu' and 'La Tuzigh Qulooba'.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 23: Dhaad & Dhaa Distinction -->
+  <div class="slide-container" id="slide23">
+      <h2 class="slide-title">Distinguishing الض (Dhaad) from الظ (Dhaa)</h2>
+      <div class="content-area">
+          <div class="two-column">
+              <div>
+                  <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/16117613277507932931" alt="Arabic letter Dhaad articulation diagram"></div>
+              </div>
+              <div style="display: flex; flex-direction: column; justify-content: center;">
+                  <h3>The Challenge</h3>
+                  <p>Because الض and الظ are both heavy and adhered (<span class="term">إِطْبَاق</span>), they are easily confused. However, their articulation points are entirely different.</p>
+                  <ul>
+                      <li><strong>Dhaad (ض):</strong> Uses <span class="term">اِسْتِطَالَة</span> (Elongation of sound across the side of the tongue).</li>
+                      <li><strong>Dhaa (ظ):</strong> Pronounced from the tip of the tongue and the edges of the upper teeth.</li>
+                  </ul>
+                  <p style="margin-top: 15px;">Due to the difficulty, Imam Al-Jazari lists all occurrences of الظ in the Quran.</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَالضَّادَ بِاسْتِطَالَةٍ وَمَخْرَجِ</div>
+                  <div class="english-text">And the Dhaad, by its elongation (Istitaalah) and articulation point</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">مَيِّزْ مِنَ الظَّاءِ وَكُلُّهَا تَجِي</div>
+                  <div class="english-text">distinguish it from the Dhaa. And all of them come (in the following contexts)...</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 24: Words with Dhaa 1 -->
+  <div class="slide-container" id="slide24">
+      <h2 class="slide-title">Occurrences of الظ (Dhaa) - Part 1</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th style="width: 25%;">Meaning</th>
+                          <th style="width: 25%; text-align:right;">Word (Arabic)</th>
+                          <th style="width: 25%;">Meaning</th>
+                          <th style="width: 25%; text-align:right;">Word (Arabic)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>The Journey</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">الظَّعْن</td>
+                          <td>The Shadow</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">الظِّلّ</td>
+                      </tr>
+                      <tr>
+                          <td>The Noon</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">الظُّهْر</td>
+                          <td>The Greatness</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">الْعُظْم</td>
+                      </tr>
+                      <tr>
+                          <td>The Protection</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">الْحِفْظ</td>
+                          <td>Wake up</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">أَيْقِظْ</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">فِي الظَّعْنِ ظِلُّ الظُّهْرِ عُظْمِ الْحِفْظِ</div>
+                  <div class="english-text">In Dha'n, Dhill, Dhuhr, 'Udhm, Hifdh</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">أَيْقِظْ وَأَنْظُرْ عَظْمِ ظَهْرِ اللَّفْظِ</div>
+                  <div class="english-text">Ayqidh, Andhur, 'Adhm, Dhahr, Lafdh.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">ظَاهِرْ لَظَى شُوَاظِ كَظْمٍ ظَلَمَا</div>
+                  <div class="english-text">Dhaahir, Ladhaa, Shuwaadh, Kadhm, Dhalamaa</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">أُغْلُظْ ظَلاَمِ ظُفْرٍ انْتَظِرْ ظَمَا</div>
+                  <div class="english-text">Ughludh, Dhalaam, Dhufr, Antadhir, Dhamaa.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">أَظْفَرَ ظَنًّا كَيْفَ جَا وَعَظْ سِوَى</div>
+                  <div class="english-text">Adhfara, Dhann wherever it appears, Wa'dh except</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">عِضِينَ ظَلَّ النَّحْلِ زُخْرُفٍ سَوَا</div>
+                  <div class="english-text">'Ideen, Dhalla in An-Nahl and Zukhruf together.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 25: Words with Dhaa 2 -->
+  <div class="slide-container" id="slide25">
+      <h2 class="slide-title">Occurrences of الظ (Dhaa) - Part 2</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th style="width: 25%;">Meaning</th>
+                          <th style="width: 25%; text-align:right;">Word (Arabic)</th>
+                          <th style="width: 25%;">Meaning</th>
+                          <th style="width: 25%; text-align:right;">Word (Arabic)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Look</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">انْظُرْ</td>
+                          <td>The Bone</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">الْعَظْم</td>
+                      </tr>
+                      <tr>
+                          <td>The Back</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">الظَّهْر</td>
+                          <td>The Pronunciation</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">اللَّفْظ</td>
+                      </tr>
+                      <tr>
+                          <td>Blazing Fire</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">لَظَى</td>
+                          <td>Flame</td>
+                          <td style="text-align: right; font-family: 'Amiri', serif; font-size: 24px;">شُوَاظ</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَظَلْتُ ظَلْتُمْ وَبِرُومٍ ظَلُّوا</div>
+                  <div class="english-text">And Dhaltu, Dhaltum, and in Ar-Room Dhalloo</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">كَالْحِجْرِ ظَلَّتْ شُعَرَا نَظَلُّ</div>
+                  <div class="english-text">Like Al-Hijr, Dhallat in Ash-Shu'araa, Nadhallu.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">يَظْلَلْنَ مَحْظُورًا مَعَ الْمُحْتَظِرِ</div>
+                  <div class="english-text">Yadhlalna, Mahdhooran with Al-Muhtadhiri</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَكُنْتَ فَظًّا وَجَمِيعِ النَّظَرِ</div>
+                  <div class="english-text">And Kunta Fadh-dhan, and all forms of Nadhar (looking).</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">إِلاَّ بِوَيْلٌ هَلْ وَأُولَى نَاضِرَهْ</div>
+                  <div class="english-text">Except (in Al-Mutaffifin) 'Waylun', 'Hal', and the first of 'Naadhirah'</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَالْغَيْظِ لاَ الرَّعْدِ وَهُودٍ قَاصِرَهْ</div>
+                  <div class="english-text">And Al-Ghaydh, not Ar-Ra'd and Hood restricted.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 26: Words with Dhaa 3 & Cautions -->
+  <div class="slide-container" id="slide26">
+      <h2 class="slide-title">Critical Separation of Letters</h2>
+      <div class="content-area">
+          <div class="two-column tiled">
+              <div>
+                  <h3 style="color: #283618;">Meeting of Dhaad and Dhaa</h3>
+                  <p>When Dhaad (ض) or Dhaa (ظ) meets another heavy letter or a Taa (ت), you must clearly separate them using <span class="term">إِظْهَار</span> (Clarity).</p>
+                  <p>Example: <span style="font-family: 'Amiri', serif; font-size: 24px; color: #bc6c25;">أَنقَضَ ظَهْرَكَ</span> (<em>Anqadha Dhahrak</em>).</p>
+              </div>
+              <div>
+                  <h3 style="color: #283618;">Meem/Baa and Faa/Waw</h3>
+                  <p>When Meem (م) or Baa (ب) meets a Faa (ف) or Waw (و), ensure strict <span class="term">إِظْهَار</span> (Clarity).</p>
+                  <p>Because they share the same Makhraj (the lips), the tongue will naturally want to merge them.</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَالْحَظُّ لاَ الْحَضُّ عَلَى الطَّعَامِ</div>
+                  <div class="english-text">And Al-Hadh (fortune), not Al-Hadd (encouraging) upon feeding</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَفِي ضَنِينٍ الْخِلاَفُ سَامِي</div>
+                  <div class="english-text">And in 'Daneen' the disagreement is known.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَإِنْ تَلاَقَيَا الْبَيَانُ لاَزِمُ</div>
+                  <div class="english-text">And if they (Dhaad and Dhaa) meet, clarity is mandatory</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">أَنْقَضَ ظَهْرَكَ يَعَضُّ الظَّالِمُ</div>
+                  <div class="english-text">'Anqadha Dhahraka', 'Ya'addud-Dhaalimu'.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَاضْطُرَّ مَعْ وَعَظْتَ مَعْ أَفَضْتُمُ</div>
+                  <div class="english-text">And 'Udturra' with 'Wa'adhta' with 'Afadtumu'</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَصَفِّ هَا جِبَاهُهُمْ عَلَيْهِمُ</div>
+                  <div class="english-text">And make clear the Haa of 'Jibaahuhum', 'Alayhimu'.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 27: Meem & Noon Mushaddadah -->
+  <div class="slide-container" id="slide27">
+      <h2 class="slide-title">Meem & Noon <span class="term">مُشَدَّدَة</span> / Meem <span class="term">سَاكِنَة</span></h2>
+      <div class="content-area">
+          <div class="tiled-content">
+              <div class="image-tile">
+                  <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/3694973927785295566" alt="Nasal cavity anatomy cross section diagram"></div>
+                  <h3 style="color: #283618; margin-top: 10px;"><span class="term">غُنَّة</span> (Nasalization)</h3>
+                  <p>Always hold a 2-count nasal sound for Noon and Meem when they have a <span class="term">شَدَّة</span>.</p>
+              </div>
+              <div class="image-tile">
+                  <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/16639776750736780574" alt="Human lips closed side view anatomy"></div>
+                  <h3 style="color: #283618; margin-top: 10px;"><span class="term">إِخْفَاء شَفَوِيّ</span> (Labial Hiding)</h3>
+                  <p>If Meem Saakinah meets Baa (ب), hide the Meem gently with Ghunnah.</p>
+              </div>
+              <div class="image-tile">
+                  <div class="image-wrapper"><img src="http://googleusercontent.com/image_collection/image_retrieval/17966163136719587962" alt="Human mouth open side view anatomy"></div>
+                  <h3 style="color: #283618; margin-top: 10px;"><span class="term">إِظْهَار شَفَوِيّ</span> (Labial Clarity)</h3>
+                  <p>If Meem Saakinah meets Waw (و) or Faa (ف), keep the Meem completely clear to avoid hiding.</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَأَظْهِرِ الْغُنَّةَ مِنْ نُونٍ وَمِنْ</div>
+                  <div class="english-text">And make the Ghunnah clear from Noon and from</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">مِيمٍ إِذَا مَا شُدِّدَا وَأَخْفِيَنْ</div>
+                  <div class="english-text">Meem when they are doubled. And hide...</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">الْمِيمَ إِنْ تَسْكُنْ بِغُنَّةٍ لَدَى</div>
+                  <div class="english-text">The Meem if it is Saakin with Ghunnah at a</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">بَاءٍ عَلَى الْمُخْتَارِ مِنْ أَهْلِ الأَدَا</div>
+                  <div class="english-text">Baa, according to the chosen opinion of the people of performance.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَأَظْهِرَنْهَا عِنْدَ بَاقِي الأَحْرُفِ</div>
+                  <div class="english-text">And make it clear at the rest of the letters</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَاحْذَرْ لَدَى وَاوٍ وَفَا أَنْ تَخْتَفِي</div>
+                  <div class="english-text">And beware, at a Waw and Faa, that it hides.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 28: Ahkaam Noon Saakinah & Tanween -->
+  <div class="slide-container" id="slide28">
+      <h2 class="slide-title">Rules of Noon Saakinah & <span class="term">تَنْوِين</span> (Tanween)</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th style="width: 25%;">Rule</th>
+                          <th style="width: 25%;">Letters</th>
+                          <th style="width: 50%;">Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong><span class="term">إِظْهَار</span> (Clarity)</strong></td>
+                          <td style="font-family: 'Amiri', serif; font-size: 22px;">ء هـ ع ح غ خ</td>
+                          <td>Pronounce the Noon clearly without extra Ghunnah.</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">إِدْغَام</span> (Merging)</strong></td>
+                          <td style="font-family: 'Amiri', serif; font-size: 22px;">ي ر م ل و ن</td>
+                          <td>Merge the Noon into the next letter.</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">إِقْلَاب</span> (Conversion)</strong></td>
+                          <td style="font-family: 'Amiri', serif; font-size: 22px;">ب</td>
+                          <td>Turn the Noon into a hidden Meem with Ghunnah.</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">إِخْفَاء</span> (Hiding)</strong></td>
+                          <td>Remaining 15 Letters</td>
+                          <td>Hide the Noon near the next letter, keeping Ghunnah.</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَحُكْمُ تَنْوِينٍ وَنُونٍ يُلْفَى</div>
+                  <div class="english-text" style="font-size: 11px;">And the rule of Tanween and Noon is found to be:</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">إِظْهَارٌ ادْغَامٌ وَقَلْبٌ إِخْفَا</div>
+                  <div class="english-text" style="font-size: 11px;">Clarity (Izhaar), Merging (Idghaam), Conversion (Qalb), and Hiding (Ikhfaa).</div>
+              </div>
+          </div>
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">فَعِنْدَ حَرْفِ الْحَلْقِ أَظْهِرْ وَادْغِمْ</div>
+                  <div class="english-text" style="font-size: 11px;">So at a throat letter, make it clear. And merge</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">فِي اللامِ وَالرَّا لاَ بِغُنَّةٍ لَزِمْ</div>
+                  <div class="english-text" style="font-size: 11px;">in the Laam and Raa, strictly without Ghunnah.</div>
+              </div>
+          </div>
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَأَدْغِمَنْ بِغُنَّةٍ فِي يُومِنُ</div>
+                  <div class="english-text" style="font-size: 11px;">And merge with Ghunnah in 'yoominu' (ي ن م و)</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">إِلاَّ بِكِلْمَةٍ كَدُنْيَا عَنْوَنُوا</div>
+                  <div class="english-text" style="font-size: 11px;">unless it is in one word like 'Dunya' they titled.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَالْقَلْبُ عِنْدَ الْبَا بِغُنَّةٍ كَذَا</div>
+                  <div class="english-text" style="font-size: 11px;">And Conversion is at the Baa with Ghunnah. Likewise</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">لاِخْفَا لَدَى بَاقِي الحُرُوفِ أُخِذَا</div>
+                  <div class="english-text" style="font-size: 11px;">Hiding at the rest of the letters is taken.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 29: Al-Madd wa Al-Qasr rules -->
+  <div class="slide-container" id="slide29">
+      <h2 class="slide-title">Rules of <span class="term">مَدّ</span> (Lengthening)</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th style="width: 25%;">Category</th>
+                          <th style="width: 25%;">Condition</th>
+                          <th style="width: 50%;">Duration & Example</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong><span class="term">وَاجِب</span> (Mandatory)</strong></td>
+                          <td>Madd letter + Hamzah in the <strong>same word</strong>.</td>
+                          <td>4 or 5 counts. (e.g., السَّمَاء).</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">جَائِز</span> (Permissible)</strong></td>
+                          <td>Madd letter + Hamzah in <strong>separate words</strong>.</td>
+                          <td>2, 4, or 5 counts. (e.g., بِمَا أُنزِلَ).</td>
+                      </tr>
+                      <tr>
+                          <td><strong><span class="term">لَازِم</span> (Compulsory)</strong></td>
+                          <td>Madd letter + Original Sukoon/Shaddah.</td>
+                          <td>Strictly 6 counts. (e.g., الضَّالِّينَ).</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَالْمَدُّ لاَزِمٌ وَوَاجِبٌ أَتَى</div>
+                  <div class="english-text" style="font-size: 11px;">And Madd comes as Compulsory (Laazim), Mandatory (Waajib)</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَجَائِزٌ وَهْوَ وَقَصْرٌ ثَبَتَا</div>
+                  <div class="english-text" style="font-size: 11px;">and Permissible (Jaa'iz), and it and shortness are established.</div>
+              </div>
+          </div>
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">فَلاَزِمٌ إِنْ جَاءَ بَعْدَ حَرْفِ مَدْ</div>
+                  <div class="english-text" style="font-size: 11px;">So it is Compulsory if after a Madd letter comes</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">سَاكِنُ حَالَيْنِ وَبِالطُّولِ يُمَدْ</div>
+                  <div class="english-text" style="font-size: 11px;">a Saakin in both states (stopping/continuing), and it is lengthened fully.</div>
+              </div>
+          </div>
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَوَاجِبٌ إِنْ جَاءَ قَبْلَ هَمْزَةِ</div>
+                  <div class="english-text" style="font-size: 11px;">And Mandatory if it comes before a Hamzah</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">مُتَّصِلاً إِنْ جُمِعَا بِكِلْمَةِ</div>
+                  <div class="english-text" style="font-size: 11px;">connected, if they are gathered in one word.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَجَائِزٌ إِذَا أَتَى مُنْفَصِلاَ</div>
+                  <div class="english-text" style="font-size: 11px;">And Permissible if it comes separated</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">أَوْ عَرَضَ السُّكُونُ وَقْفًا مُسْجَلاَ</div>
+                  <div class="english-text" style="font-size: 11px;">or if the Sukoon is temporary due to stopping absolutely.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 30: Types of Waqf -->
+  <div class="slide-container" id="slide30">
+      <h2 class="slide-title"><span class="term">مَعْرِفَة الْوَقْف</span> (Knowing the Stops) - Part 1</h2>
+      <div class="content-area">
+          <div class="tiled-content">
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-circle-check"></i></div>
+                  <h3><span class="term">تَامّ</span> (Complete)</h3>
+                  <p>Meaning and grammar are completely detached from what follows. (Stop & Start after).</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-check"></i></div>
+                  <h3><span class="term">كَاف</span> (Sufficient)</h3>
+                  <p>Meaning is connected, but grammar is complete. (Stop & Start after).</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                  <h3><span class="term">حَسَن</span> (Good)</h3>
+                  <p>Meaning and grammar are strongly connected. (You may stop, but must repeat to start).</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَبَعْدَ تَجْوِيدِكَ لِلْحُرُوفِ</div>
+                  <div class="english-text">And after your Tajweed of the letters</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">لاَبُدَّ مِنْ مَعْرِفَةِ الْوُقُوفِ</div>
+                  <div class="english-text">it is absolutely necessary to know the stops.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَالاِبْتِدَاءِ وَهْيَ تُقْسَمُ إِذَنْ</div>
+                  <div class="english-text">And the starts. And they are divided then</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">ثَلاَثَةً تَامٌ وَكَافٍ وَحَسَنْ</div>
+                  <div class="english-text">into three: Complete (Taamm), Sufficient (Kaaf), and Good (Hasan).</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَهْيَ لِمَا تَمَّ فَإِنْ لَمْ يُوجَدِ</div>
+                  <div class="english-text">And they are for what is complete. So if there is no connection found</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">تَعَلُّقٌ أَوْ كَانَ مَعْنًى فَابْتَدِي</div>
+                  <div class="english-text">or only in meaning, then initiate.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 31: Types of Waqf 2 -->
+  <div class="slide-container" id="slide31">
+      <h2 class="slide-title"><span class="term">مَعْرِفَة الْوَقْف</span> (Knowing the Stops) - Part 2</h2>
+      <div class="content-area">
+          <div class="two-column tiled">
+              <div>
+                  <h3 style="color: #283618;"><span class="term">حَسَن</span> (Good) and Verses</h3>
+                  <p>Normally, if a sentence is grammatically connected, you should not start from there. EXCEPT at the end of a verse (Ayah). It is Sunnah and permissible to stop and start.</p>
+              </div>
+              <div>
+                  <h3 style="color: #283618;"><span class="term">قَبِيح</span> (Repulsive)</h3>
+                  <p>Stopping where it corrupts the meaning (e.g., stopping at "do not pray..." without finishing the condition). If forced to stop by breath, you <strong>must</strong> repeat to correct the meaning.</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">فَالتَّامُ فَالْكَافِي وَلَفْظًا فَامْنَعَنْ</div>
+                  <div class="english-text">So the Taamm, then the Kaaf. And if grammatically connected, then prevent (initiating)</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">إِلاَّ رُؤُوسَ الآيِ جَوِّزْ فَالْحَسَنْ</div>
+                  <div class="english-text">except at the heads of verses, permit it, so it is Hasan.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَغَيْرُ مَا تَمَّ قَبِيحٌ وَلَهُ</div>
+                  <div class="english-text">And other than what is complete is Repulsive (Qabeeh), and for it</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">يُوقَفُ مُضْطَرًّا وَيُبْدَا قَبْلَهُ</div>
+                  <div class="english-text">one stops out of necessity, and initiates before it.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 32: Al-Maqtoo' wa Al-Mawsool -->
+  <div class="slide-container" id="slide32">
+      <h2 class="slide-title">Script: <span class="term">الْمَقْطُوع</span> (Cut) & <span class="term">الْمَوْصُول</span> (Joined)</h2>
+      <div class="content-area">
+          <div class="two-column tiled">
+              <div>
+                  <h3 style="color: #283618;"><i class="fa-solid fa-scissors" style="color: #bc6c25; margin-right: 10px;"></i><span class="term">الْمَقْطُوع</span> (Cut)</h3>
+                  <p>Words that are written separately in the Uthmani script (e.g., أَنْ لَا vs أَلَّا). If forced by breath, a reciter <em>may</em> stop on the first word.</p>
+              </div>
+              <div>
+                  <h3 style="color: #283618;"><i class="fa-solid fa-link" style="color: #bc6c25; margin-right: 10px;"></i><span class="term">الْمَوْصُول</span> (Joined)</h3>
+                  <p>Words that are joined together as one word in the script (e.g., مِمَّا). It is forbidden to stop in the middle of a joined word.</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَاعْرِفْ لِمَقْطُوعٍ وَمَوْصُولٍ وَتَا</div>
+                  <div class="english-text">And know the cut and joined words, and the Taa</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">فِي مُصْحَفِ الإِمَامِ فِيمَا قَدْ أَتَى</div>
+                  <div class="english-text">in the Mushaf of the Imam (Uthman) regarding what has come.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">فَاقْطَعْ بِعَشْرِ كَلِمَاتٍ أَنْ لاَ</div>
+                  <div class="english-text">So cut 'An Laa' in ten words</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">مَعْ مَلْجَإٍ وَلاَ إِلَهَ إِلاَّ</div>
+                  <div class="english-text">with 'Malja'in', and 'La Ilaha Illa'...</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 33: Ta'aat -->
+  <div class="slide-container" id="slide33">
+      <h2 class="slide-title">Feminine <span class="term">تَاء</span> (Taa) Written Open (ت)</h2>
+      <div class="content-area">
+          <div class="table-layout">
+              <table>
+                  <thead>
+                      <tr>
+                          <th style="width: 25%;">Word</th>
+                          <th style="width: 75%;">Context in the Quran (Written as ت instead of ة)</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>رَحْمَت</strong> (Rahmat)</td>
+                          <td>Al-Baqarah, Al-A'raf, Room, Luqman, Fatir, Maryam (e.g., ذِكْرُ رَحْمَتِ رَبِّكَ)</td>
+                      </tr>
+                      <tr>
+                          <td><strong>نِعْمَت</strong> (Ni'mat)</td>
+                          <td>Al-Baqarah, Aal 'Imran, Al-Ma'idah, Ibrahim, An-Nahl, Fatir</td>
+                      </tr>
+                  </tbody>
+              </table>
+              <p style="text-align: center; margin-top: 15px;"><em>If forced to stop, you must stop with a "T" sound, not an "H" sound, following the script.</em></p>
+          </div>
+      </div>
+      <div class="poem-footer">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَرَحْمَتُ الزُّخْرُفِ بِالتَّا زَبَرَهْ</div>
+                  <div class="english-text">And 'Rahmat' in Az-Zukhruf is written with Taa</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">الاَعْرَافِ رُومٍ هُودٍ كَافِ الْبَقَرَهْ</div>
+                  <div class="english-text">(And in) Al-A'raf, Room, Hood, Kaaf (Maryam), Al-Baqarah.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">نِعْمَتُهَا ثَلاَثُ نَحْلٍ إِبْرَهَمْ</div>
+                  <div class="english-text">'Ni'mat' in it (Al-Baqarah), three in An-Nahl, Ibrahim</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">مَعَا أَخِيرَاتُ عُقُودُ الثَّانِ هَمْ</div>
+                  <div class="english-text">together, the last ones of Al-Uqood (Al-Ma'idah), the second of 'Ham' (Ghafir).</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 34: Hamzat Al-Wasl -->
+  <div class="slide-container" id="slide34">
+      <h2 class="slide-title">Starting with <span class="term">هَمْزَةُ الْوَصْل</span> (Connecting Hamzah)</h2>
+      <div class="content-area">
+          <div class="tiled-content">
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-arrow-up"></i></div>
+                  <h3><span class="term">ضَمَّة</span> (Dammah)</h3>
+                  <p>Start with a Dammah if the <strong>third letter</strong> of the verb has an original Dammah (e.g., <span style="font-family: 'Amiri'; font-size:22px;">ٱدْعُ</span>).</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-arrow-down"></i></div>
+                  <h3><span class="term">كَسْرَة</span> (Kasrah)</h3>
+                  <p>Start with a Kasrah if the third letter has a <span class="term">فَتْحَة</span> (Fathah) or Kasrah (e.g., <span style="font-family: 'Amiri'; font-size:22px;">ٱضْرِب</span>).</p>
+              </div>
+              <div class="tile">
+                  <div class="icon"><i class="fa-solid fa-list"></i></div>
+                  <h3>Specific Nouns</h3>
+                  <p>Always Kasrah on specific nouns: <span style="font-family: 'Amiri'; font-size:22px;">ابْن، امْرِئ، اثْنَيْن</span>. And Fathah for the definite article (ال).</p>
+              </div>
+          </div>
+      </div>
+      <div class="poem-footer" style="padding: 22px 25px 10px 25px;">
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَابْدَأْ بِهَمْزِ الْوَصْلِ مِنْ فِعْلٍ بِضَمْ</div>
+                  <div class="english-text">And begin with Hamzat Al-Wasl of a verb with a Dammah</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">إِنْ كَانَ ثَالِثٌ مِنَ الْفِعْلِ يُضَمْ</div>
+                  <div class="english-text">if the third letter of the verb has a Dammah.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">وَكْسِرْهُ حَالَ الْكَسْرِ وَالْفَتْحِ وَفِي</div>
+                  <div class="english-text">And break it (Kasrah) in the case of Kasrah and Fathah. And in</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">الاَسْمَاءِ غَيْرَ اللاَّمِ كَسْرَهَا وَفِي</div>
+                  <div class="english-text">the nouns other than the 'Laam' (definite article), its breaking is fulfilled. And in:</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text">ابْنٍ مَعَ ابْنَةِ امْرِئٍ وَاثْنَيْنِ</div>
+                  <div class="english-text">Ibn with Ibnat, Imri'in, and Ithnayn</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text">وَامْرَأَةٍ وَاسْمٍ مَعَ اثْنَتَيْنِ</div>
+                  <div class="english-text">And Imra'atin, and Ism, with Ithnatayn.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Slide 35: Conclusion -->
+  <div class="slide-container" id="slide35">
+      <div class="section-title-layout">
+          <i class="fa-solid fa-star-and-crescent" style="font-size: 80px; color: #bc6c25; margin-bottom: 20px;"></i>
+          <h2>Khatimat Al-Mandhoomah (Conclusion)</h2>
+          <hr>
+          <p style="font-size: 24px; max-width: 800px; line-height: 1.6; color: #24291c;">This concludes the structured foundation of <span class="term">تَجْوِيد</span> (Tajweed) as laid out by Imam Al-Jazari. Mastery requires dedication, a sincere heart, and the continuous guidance of a qualified teacher.</p>
+      </div>
+      <div class="poem-footer" style="padding: 18px 25px 5px 25px;">
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَحَاذِرِ الْوَقْفَ بِكُلِّ الحَرَكَهْ</div>
+                  <div class="english-text" style="font-size: 11px;">And beware of stopping with the full vowel</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">إِلاَّ إِذَا رُمْتَ فَبَعْضُ حَرَكَهْ</div>
+                  <div class="english-text" style="font-size: 11px;">except if you seek Roum (partial vowel), then a portion of the vowel.</div>
+              </div>
+          </div>
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">إِلاَّ بِفَتْحٍ أَوْ بِنَصْبٍ وَأَشِمْ</div>
+                  <div class="english-text" style="font-size: 11px;">Except with Fathah or Nasb. And do Ishmaam</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">إِشَارَةً بِالضَّمِّ فِي رَفْعٍ وَضَمْ</div>
+                  <div class="english-text" style="font-size: 11px;">an indication by the lips of Dammah in Raf' (Nominative) and Dammah.</div>
+              </div>
+          </div>
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَقَدْ تَقَضَّى نَظْمِيَ الْمُقَدِّمَهْ</div>
+                  <div class="english-text" style="font-size: 11px;">And my poem, The Introduction, has concluded</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">مِنِّي لِقَارِئِ الْقُرْآنِ تَقْدِمَهْ</div>
+                  <div class="english-text" style="font-size: 11px;">an offering from me to the reciter of the Quran.</div>
+              </div>
+          </div>
+          <div class="verse-row" style="margin-bottom: 3px; padding-bottom: 3px;">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَالْحَمْدُ لِلَّهِ لَهَا خِتَامُ</div>
+                  <div class="english-text" style="font-size: 11px;">And praise be to Allah is its conclusion</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">ثُمَّ الصَّلاَةُ بَعْدُ وَالسَّلاَمُ</div>
+                  <div class="english-text" style="font-size: 11px;">Then blessings thereafter, and peace.</div>
+              </div>
+          </div>
+          <div class="verse-row">
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">عَلَى النَّبِيِّ الْمُصْطَفَى وَآلِهِ</div>
+                  <div class="english-text" style="font-size: 11px;">Upon the chosen Prophet and his family</div>
+              </div>
+              <div class="shatr">
+                  <div class="arabic-text" style="font-size: 19px;">وَصَحْبِهِ وَتَابِعِي مِنْوَالِهِ</div>
+                  <div class="english-text" style="font-size: 11px;">and his companions and the followers of his way.</div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </div><!-- /.stage -->
+
+  <button class="edge-nav" id="prevEdge" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="edge-nav" id="nextEdge" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+  <div class="deck-hint" id="deckHint">Use <kbd>←</kbd> <kbd>→</kbd> to move &middot; <kbd>O</kbd> for all slides &middot; <kbd>F</kbd> for fullscreen</div>
+</div><!-- /#viewport -->
+
+<div class="deck-bar">
+  <div class="deck-progress" id="deckProgress" style="width:0%"></div>
+
+  <a class="deck-brand" href="../../index.html" id="deckBrand">Dar Al Quran Wal Hikmah</a>
+
+  <button class="deck-btn" id="prevBtn" aria-label="Previous slide">
+    <i class="fa-solid fa-chevron-left"></i><span class="label">Prev</span>
+  </button>
+
+  <div class="deck-center">
+    <span class="deck-title" id="deckTitle"></span>
+    <span class="deck-count" id="deckCount">1 / 1</span>
+  </div>
+
+  <button class="deck-btn" id="nextBtn" aria-label="Next slide">
+    <span class="label">Next</span><i class="fa-solid fa-chevron-right"></i>
+  </button>
+
+  <div class="deck-right">
+    <button class="deck-btn" id="ovBtn" aria-label="All slides" title="All slides (O)">
+      <i class="fa-solid fa-table-cells-large"></i>
+    </button>
+    <a class="deck-btn" id="popBtn" href="#" target="_blank" rel="noopener" aria-label="Open in a new tab" title="Open in a new tab" hidden>
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+    <button class="deck-btn" id="fsBtn" aria-label="Fullscreen" title="Fullscreen (F)">
+      <i class="fa-solid fa-expand"></i>
+    </button>
+  </div>
+</div>
+
+<div id="overview" aria-hidden="true">
+  <div class="ov-head">
+    <h2>All Slides</h2>
+    <button class="deck-btn" id="ovClose"><i class="fa-solid fa-xmark"></i><span class="label">Close</span></button>
+  </div>
+  <div class="ov-grid" id="ovGrid"></div>
+</div>
+
+<script>
+(function () {
+  var stage    = document.getElementById('stage');
+  var viewport = document.getElementById('viewport');
+  var slides   = Array.prototype.slice.call(stage.querySelectorAll('.slide-container'));
+  var total    = slides.length;
+  var current  = 0;
+
+  var titleEl = document.getElementById('deckTitle');
+  var countEl = document.getElementById('deckCount');
+  var progEl  = document.getElementById('deckProgress');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var prevEdge = document.getElementById('prevEdge');
+  var nextEdge = document.getElementById('nextEdge');
+  var ovBtn   = document.getElementById('ovBtn');
+  var ov      = document.getElementById('overview');
+  var ovGrid  = document.getElementById('ovGrid');
+  var ovClose = document.getElementById('ovClose');
+  var fsBtn   = document.getElementById('fsBtn');
+  var popBtn  = document.getElementById('popBtn');
+  var hint    = document.getElementById('deckHint');
+
+  var embedded = window.self !== window.top;
+
+  function titleOf(slide, i) {
+    var el = slide.querySelector('.slide-title') || slide.querySelector('h1') || slide.querySelector('h2');
+    var t = el ? el.textContent.replace(/\s+/g, ' ').trim() : '';
+    return t || ('Slide ' + (i + 1));
+  }
+  var titles = slides.map(titleOf);
+
+  /* ---- Scale the 1280x720 stage to fit the viewport ---- */
+  function fit() {
+    var w = viewport.clientWidth - 24;
+    var h = viewport.clientHeight - 24;
+    var s = Math.min(w / 1280, h / 720);
+    if (!isFinite(s) || s <= 0) s = 1;
+    stage.style.transform = 'scale(' + s + ')';
+    sizeThumbs();
+  }
+
+  function sizeThumbs() {
+    var frames = ovGrid.querySelectorAll('.thumb-frame');
+    for (var i = 0; i < frames.length; i++) {
+      var inner = frames[i].firstElementChild;
+      if (inner) inner.style.transform = 'scale(' + (frames[i].clientWidth / 1280) + ')';
+    }
+  }
+
+  /* ---- Navigation ---- */
+  function show(i, updateHash) {
+    i = Math.max(0, Math.min(total - 1, i));
+    slides[current].classList.remove('is-active');
+    slides[i].classList.add('is-active');
+    current = i;
+
+    titleEl.textContent = titles[i];
+    countEl.textContent = (i + 1) + ' / ' + total;
+    progEl.style.width = (total > 1 ? (i / (total - 1)) * 100 : 100) + '%';
+    document.title = titles[i] + ' — Al-Muqaddimah Al-Jazariyyah';
+
+    prevBtn.disabled = prevEdge.disabled = (i === 0);
+    nextBtn.disabled = nextEdge.disabled = (i === total - 1);
+
+    if (updateHash !== false) {
+      try { history.replaceState(null, '', '#s' + (i + 1)); } catch (e) { location.hash = 's' + (i + 1); }
+    }
+    if (embedded) popBtn.href = location.pathname + '#s' + (i + 1);
+
+    var cur = ovGrid.querySelector('.thumb.current');
+    if (cur) cur.classList.remove('current');
+    var t = ovGrid.querySelector('.thumb[data-i="' + i + '"]');
+    if (t) t.classList.add('current');
+  }
+
+  function next() { if (current < total - 1) show(current + 1); }
+  function prev() { if (current > 0) show(current - 1); }
+
+  function fromHash() {
+    var m = /^#(?:s|slide)?(\d+)$/.exec(location.hash || '');
+    return m ? Math.max(0, Math.min(total - 1, parseInt(m[1], 10) - 1)) : 0;
+  }
+
+  /* ---- Overview ---- */
+  var ovBuilt = false;
+  function buildOverview() {
+    if (ovBuilt) return;
+    ovBuilt = true;
+    var frag = document.createDocumentFragment();
+    slides.forEach(function (slide, i) {
+      var btn = document.createElement('button');
+      btn.className = 'thumb';
+      btn.setAttribute('data-i', i);
+
+      var frame = document.createElement('div');
+      frame.className = 'thumb-frame';
+      var inner = document.createElement('div');
+      inner.className = 'thumb-inner';
+
+      var clone = slide.cloneNode(true);
+      clone.removeAttribute('id');
+      clone.classList.remove('is-active');
+      var ids = clone.querySelectorAll('[id]');
+      for (var k = 0; k < ids.length; k++) ids[k].removeAttribute('id');
+      inner.appendChild(clone);
+      frame.appendChild(inner);
+
+      var label = document.createElement('span');
+      label.className = 'thumb-label';
+      label.innerHTML = '<b>' + (i + 1) + '.</b> ';
+      label.appendChild(document.createTextNode(titles[i]));
+
+      btn.appendChild(frame);
+      btn.appendChild(label);
+      btn.addEventListener('click', function () { closeOverview(); show(i); });
+      frag.appendChild(btn);
+    });
+    ovGrid.appendChild(frag);
+    sizeThumbs();
+  }
+
+  function openOverview() {
+    buildOverview();
+    ov.classList.add('open');
+    ov.setAttribute('aria-hidden', 'false');
+    sizeThumbs();
+    var t = ovGrid.querySelector('.thumb[data-i="' + current + '"]');
+    if (t) {
+      t.classList.add('current');
+      t.scrollIntoView({ block: 'center' });
+    }
+  }
+  function closeOverview() {
+    ov.classList.remove('open');
+    ov.setAttribute('aria-hidden', 'true');
+  }
+  function toggleOverview() { ov.classList.contains('open') ? closeOverview() : openOverview(); }
+
+  /* ---- Fullscreen ---- */
+  function toggleFullscreen() {
+    var d = document;
+    if (!d.fullscreenElement && !d.webkitFullscreenElement) {
+      var el = d.documentElement;
+      (el.requestFullscreen || el.webkitRequestFullscreen || function () {}).call(el);
+    } else {
+      (d.exitFullscreen || d.webkitExitFullscreen || function () {}).call(d);
+    }
+  }
+  function syncFsIcon() {
+    var on = !!(document.fullscreenElement || document.webkitFullscreenElement);
+    fsBtn.innerHTML = '<i class="fa-solid fa-' + (on ? 'compress' : 'expand') + '"></i>';
+  }
+  document.addEventListener('fullscreenchange', syncFsIcon);
+  document.addEventListener('webkitfullscreenchange', syncFsIcon);
+
+  /* ---- Wiring ---- */
+  prevBtn.addEventListener('click', prev);
+  nextBtn.addEventListener('click', next);
+  prevEdge.addEventListener('click', prev);
+  nextEdge.addEventListener('click', next);
+  ovBtn.addEventListener('click', toggleOverview);
+  ovClose.addEventListener('click', closeOverview);
+  fsBtn.addEventListener('click', toggleFullscreen);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var k = e.key;
+    if (k === 'ArrowRight' || k === 'PageDown' || k === ' ' || k === 'Spacebar') { e.preventDefault(); next(); }
+    else if (k === 'ArrowLeft' || k === 'PageUp' || k === 'Backspace') { e.preventDefault(); prev(); }
+    else if (k === 'Home') { e.preventDefault(); show(0); }
+    else if (k === 'End') { e.preventDefault(); show(total - 1); }
+    else if (k === 'o' || k === 'O') { e.preventDefault(); toggleOverview(); }
+    else if (k === 'f' || k === 'F') { e.preventDefault(); toggleFullscreen(); }
+    else if (k === 'Escape') { if (ov.classList.contains('open')) { e.preventDefault(); closeOverview(); } }
+  });
+
+  /* Make keyboard work as soon as the embedded deck is clicked */
+  window.addEventListener('pointerdown', function () {
+    if (embedded) { try { window.focus(); } catch (e) {} }
+    hideHint();
+  });
+
+  /* Touch / swipe */
+  var sx = 0, sy = 0, tracking = false;
+  viewport.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1) { tracking = false; return; }
+    tracking = true; sx = e.touches[0].clientX; sy = e.touches[0].clientY;
+  }, { passive: true });
+  viewport.addEventListener('touchend', function (e) {
+    if (!tracking) return;
+    tracking = false;
+    var t = e.changedTouches[0];
+    var dx = t.clientX - sx, dy = t.clientY - sy;
+    if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) { dx < 0 ? next() : prev(); }
+  }, { passive: true });
+
+  window.addEventListener('resize', fit);
+  window.addEventListener('hashchange', function () { show(fromHash(), false); });
+
+  /* Hint auto-dismiss */
+  var hintTimer = setTimeout(hideHint, 5000);
+  function hideHint() { clearTimeout(hintTimer); hint.classList.add('hidden'); }
+
+  /* Init */
+  if (embedded) {
+    popBtn.hidden = false;
+    document.getElementById('deckBrand').style.display = 'none';
+  }
+  slides.forEach(function (s) { s.classList.remove('is-active'); });
+  fit();
+  show(fromHash(), false);
+  syncFsIcon();
+  window.addEventListener('load', fit);
+})();
+</script>
+
+</body>
+</html>

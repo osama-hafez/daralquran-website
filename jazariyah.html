@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al-Muqaddimah Al-Jazariyyah — Tajweed Masterclass | Dar Al Quran Wal Hikmah</title>
+  <meta name="description" content="A 35-slide masterclass on Tajweed based on the poem of Imam Muhammad Ibn Al-Jazari, taught at Dar Al Quran Wal Hikmah.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <span class="brand-en">Dar Al Quran Wal Hikmah</span>
+      <span class="brand-ar arabic">دار القرآن والحكمة</span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu"><span></span></label>
+    <nav class="site-nav">
+      <a href="index.html#about">About</a>
+      <a href="index.html#summer">Summer Program</a>
+      <a href="index.html#adults">Adult Classes</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero" id="top">
+  <div class="eyebrow">Course Material</div>
+  <h1>Al-Muqaddimah Al-Jazariyyah</h1>
+  <div class="page-hero-ar arabic">الْمُقَدِّمَة الْجَزَرِيَّة</div>
+  <p>A masterclass on <span class="arabic">تَجْوِيد</span> — theoretical foundations and practical application, based on the poem of Imam Muhammad Ibn Al-Jazari Ash-Shafi'i.</p>
+</div>
+
+<section id="slides">
+  <div class="container">
+    <h2 class="section-title">The Slides</h2>
+    <p class="section-sub">Thirty-five slides covering the articulation points, the characteristics of the letters, and the rules of recitation — each with the relevant verses of the poem and their translation.</p>
+
+    <div class="deck-embed" id="deckEmbed">
+      <iframe
+        id="deckFrame"
+        src="slides/jazariyah/"
+        title="Al-Muqaddimah Al-Jazariyyah — slide deck"
+        allowfullscreen
+        loading="lazy"></iframe>
+    </div>
+
+    <p class="deck-note">
+      Click the deck once, then use <kbd>&larr;</kbd> <kbd>&rarr;</kbd> to move between slides,
+      <kbd>O</kbd> to see every slide at once, and <kbd>F</kbd> for fullscreen.
+    </p>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="slides/jazariyah/" target="_blank" rel="noopener">Open in a new tab</a>
+      <button class="btn btn-dark" id="deckFsBtn" type="button">View fullscreen</button>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="about-poem">
+  <div class="container">
+    <h2 class="section-title">About the Poem</h2>
+    <p class="section-sub">Why this text sits at the heart of the Tajweed curriculum.</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>The Author</h3>
+        <div class="card-ar arabic">ابن الجزري</div>
+        <p>Imam Muhammad Ibn Al-Jazari Ash-Shafi'i (d. 833 AH) was the foremost authority of his age in the science of Qur'anic recitation, and his chains of transmission run through nearly every reciter teaching today.</p>
+      </div>
+      <div class="card">
+        <h3>The Text</h3>
+        <div class="card-ar arabic">المنظومة</div>
+        <p>A concise didactic poem of just over a hundred lines that gathers what every reciter must know before beginning — the articulation points, the characteristics of the letters, and the rules that follow from them.</p>
+      </div>
+      <div class="card">
+        <h3>How We Study It</h3>
+        <div class="card-ar arabic">الدراسة</div>
+        <p>Line by line, with the meaning of each verse explained and then applied directly to recitation, so that the theory is never separated from the sound of the letter on the tongue.</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-dark" href="index.html#adults">Adult Tajweed Classes</a>
+      <a class="btn btn-dark" href="index.html#contact">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4>Dar Al Quran Wal Hikmah</h4>
+      <p>3105 Dundas St W, Suite 201<br>Mississauga, ON</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Tel: <a href="tel:+12899950626">289-995-0626</a><br>
+      <a href="mailto:daralquran.waalhikmah@gmail.com">daralquran.waalhikmah@gmail.com</a></p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="index.html#summer">Summer Qur'an Program</a><br>
+      <a href="index.html#adults">Adult Tajweed Classes</a><br>
+      <a href="index.html#contact">Contact</a></p>
+    </div>
+    <p class="fine">&copy; 2026 Dar Al Quran Wal Hikmah — دار القرآن والحكمة</p>
+  </div>
+</footer>
+
+<script>
+  // Close the mobile menu after tapping a nav link
+  const navToggle = document.getElementById('nav-toggle');
+  document.querySelectorAll('.site-nav a').forEach(link => {
+    link.addEventListener('click', () => { navToggle.checked = false; });
+  });
+
+  // Fullscreen the embedded deck; fall back to opening it in a new tab
+  const embed = document.getElementById('deckEmbed');
+  document.getElementById('deckFsBtn').addEventListener('click', () => {
+    const req = embed.requestFullscreen || embed.webkitRequestFullscreen;
+    if (req) {
+      req.call(embed);
+      document.getElementById('deckFrame').focus();
+    } else {
+      window.open('slides/jazariyah/', '_blank', 'noopener');
+    }
+  });
+</script>
+
+</body>
+</html>
