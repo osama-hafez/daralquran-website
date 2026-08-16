@@ -73,6 +73,52 @@ section[id] { scroll-margin-top: 5.5rem; }
 }
 .site-nav a:hover { color: var(--white); border-bottom-color: var(--tan); }
 
+/* Services dropdown */
+.site-nav .has-dropdown { position: relative; }
+.nav-dropdown-toggle {
+  font: inherit;
+  font-size: 0.98rem;
+  color: var(--cream);
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.nav-dropdown-toggle:hover { color: var(--white); border-bottom-color: var(--tan); }
+.nav-dropdown-toggle .caret {
+  border: 5px solid transparent;
+  border-top-color: currentColor;
+  margin-top: 4px;
+  transition: transform 0.15s ease;
+}
+.has-dropdown.open .nav-dropdown-toggle .caret { transform: rotate(180deg); margin-top: -4px; }
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.7rem);
+  left: -0.9rem;
+  min-width: 15rem;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px rgba(40, 54, 24, 0.28);
+  padding: 0.5rem 0;
+  overflow: hidden;
+}
+.has-dropdown.open .dropdown-menu { display: block; }
+.site-nav .dropdown-menu a {
+  display: block;
+  color: var(--ink);
+  padding: 0.55rem 1.1rem;
+  border-bottom: 0;
+  font-size: 0.95rem;
+}
+.site-nav .dropdown-menu a:hover { background: var(--cream-deep); color: var(--forest); border-bottom: 0; }
+
 /* Mobile nav: checkbox-driven hamburger */
 .nav-toggle { display: none; }
 .nav-toggle-label { display: none; cursor: pointer; padding: 0.4rem; }
@@ -105,6 +151,20 @@ section[id] { scroll-margin-top: 5.5rem; }
   .nav-toggle:checked ~ .nav-toggle-label span { transform: rotate(45deg); }
   .nav-toggle:checked ~ .nav-toggle-label span::before { transform: rotate(-90deg); top: 0; }
   .nav-toggle:checked ~ .nav-toggle-label span::after { display: none; }
+
+  /* Dropdown becomes an inline expanding list on small screens */
+  .site-nav .has-dropdown { width: 100%; border-bottom: 1px solid rgba(254, 250, 224, 0.15); }
+  .nav-dropdown-toggle { width: 100%; justify-content: space-between; padding: 0.55rem 0.2rem; font-size: 1.05rem; }
+  .dropdown-menu {
+    position: static;
+    min-width: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.16);
+    padding: 0.2rem 0 0.5rem;
+  }
+  .site-nav .dropdown-menu a { color: var(--cream); padding: 0.5rem 0.2rem 0.5rem 1.1rem; border-bottom: 0; }
+  .site-nav .dropdown-menu a:hover { background: none; color: var(--white); }
 }
 
 /* Hero */
@@ -132,6 +192,9 @@ section[id] { scroll-margin-top: 5.5rem; }
 .btn-primary { background: var(--tan); color: var(--forest); }
 .btn-outline { border: 2px solid var(--tan); color: var(--cream); }
 .btn-dark { background: var(--forest); color: var(--cream); }
+.btn-outline-dark { border: 2px solid var(--forest); color: var(--forest); background: none; }
+button.btn { font: inherit; font-weight: 600; cursor: pointer; border: 0; }
+button.btn-outline-dark { border: 2px solid var(--forest); }
 
 /* Sections */
 section { padding: 3.2rem 0; }
@@ -254,6 +317,47 @@ ol.steps li::before {
   border-radius: 4px;
   padding: 0 0.32rem;
 }
+
+/* Status pill on program cards — "Now enrolling", "Registering interest", etc. */
+.pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-radius: 999px;
+  padding: 0.22rem 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.pill-open { background: var(--olive); color: var(--cream); }
+.pill-interest { background: var(--cream-deep); color: var(--earth); border: 1px solid var(--tan); }
+
+/* Payment warning dialog */
+body.modal-open { overflow: hidden; }
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(40, 54, 24, 0.62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+.modal-backdrop[hidden] { display: none; }
+.modal {
+  background: var(--white);
+  border-radius: var(--radius);
+  border-top: 5px solid var(--tan);
+  box-shadow: 0 18px 44px rgba(40, 54, 24, 0.4);
+  padding: 1.8rem;
+  max-width: 32rem;
+  width: 100%;
+}
+.modal h3 { font-size: 1.35rem; margin-bottom: 0.6rem; }
+.modal p { color: var(--ink-soft); margin-bottom: 0.8rem; }
+.modal .modal-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.4rem; }
+.modal .modal-actions .btn { font-size: 0.95rem; }
 
 /* Footer */
 .site-footer { background: var(--forest); color: var(--cream); padding: 3.2rem 0 2rem; margin-top: 3rem; }

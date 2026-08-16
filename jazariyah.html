@@ -23,8 +23,15 @@
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu"><span></span></label>
     <nav class="site-nav">
       <a href="index.html#about">About</a>
-      <a href="index.html#summer">Summer Program</a>
-      <a href="index.html#adults">Adult Classes</a>
+      <div class="has-dropdown">
+        <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="services-menu">Services<span class="caret"></span></button>
+        <div class="dropdown-menu" id="services-menu">
+          <a href="weekend-kids.html">Weekend Kids &amp; Youth</a>
+          <a href="weekend-adults.html">Weekend Adult Classes</a>
+          <a href="hifz.html">Full-Time Ḥifẓ Program</a>
+          <a href="daytime.html">Daytime Qur'an Class</a>
+        </div>
+      </div>
       <a href="index.html#contact">Contact</a>
     </nav>
   </div>
@@ -86,7 +93,7 @@
     </div>
 
     <div class="actions">
-      <a class="btn btn-dark" href="index.html#adults">Adult Tajweed Classes</a>
+      <a class="btn btn-dark" href="weekend-adults.html">Weekend Adult Classes</a>
       <a class="btn btn-dark" href="index.html#contact">Contact Us</a>
     </div>
   </div>
@@ -104,22 +111,19 @@
       <a href="mailto:daralquran.waalhikmah@gmail.com">daralquran.waalhikmah@gmail.com</a></p>
     </div>
     <div>
-      <h4>Quick Links</h4>
-      <p><a href="index.html#summer">Summer Qur'an Program</a><br>
-      <a href="index.html#adults">Adult Tajweed Classes</a><br>
+      <h4>Programs</h4>
+      <p><a href="weekend-kids.html">Weekend Kids &amp; Youth</a><br>
+      <a href="weekend-adults.html">Weekend Adult Classes</a><br>
+      <a href="hifz.html">Full-Time Ḥifẓ Program</a><br>
+      <a href="daytime.html">Daytime Qur'an Class</a><br>
       <a href="index.html#contact">Contact</a></p>
     </div>
     <p class="fine">&copy; 2026 Dar Al Quran Wal Hikmah — دار القرآن والحكمة</p>
   </div>
 </footer>
 
+<script src="js/site.js"></script>
 <script>
-  // Close the mobile menu after tapping a nav link
-  const navToggle = document.getElementById('nav-toggle');
-  document.querySelectorAll('.site-nav a').forEach(link => {
-    link.addEventListener('click', () => { navToggle.checked = false; });
-  });
-
   // Fullscreen the embedded deck; fall back to opening it in a new tab
   const embed = document.getElementById('deckEmbed');
   document.getElementById('deckFsBtn').addEventListener('click', () => {
