@@ -170,7 +170,7 @@ section[id] { scroll-margin-top: 5.5rem; }
 /* Hero */
 .hero {
   background: linear-gradient(rgba(40, 54, 24, 0.8), rgba(40, 54, 24, 0.8)),
-    url("../assets/shaykh-muhammad-3.png") center 30% / cover no-repeat;
+    url("../assets/hero-bg.avif") center 30% / cover no-repeat;
   color: var(--cream);
   text-align: center;
   padding: 5.5rem 1.25rem 5rem;
