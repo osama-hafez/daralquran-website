@@ -218,6 +218,10 @@ section.alt { background: var(--cream-deep); }
 .card .card-ar { color: var(--olive); font-size: 1.1rem; margin-bottom: 0.6rem; }
 .card p, .card li { color: var(--ink-soft); font-size: 0.98rem; }
 .card .btn { margin-top: 1.1rem; font-size: 0.95rem; }
+.aligned-card-actions .card { display: flex; flex-direction: column; }
+.aligned-card-actions .card .btn { align-self: flex-start; margin-top: auto; }
+.aligned-card-actions .card p { margin-bottom: 1.1rem; }
+.enrolling-grid .card p { margin-bottom: 1.6rem; }
 
 /* Program cards with image */
 .program-card { overflow: hidden; padding: 0; display: flex; flex-direction: column; }
@@ -346,6 +350,7 @@ body.modal-open { overflow: hidden; }
 }
 .modal-backdrop[hidden] { display: none; }
 .modal {
+  position: relative;
   background: var(--white);
   border-radius: var(--radius);
   border-top: 5px solid var(--tan);
@@ -354,10 +359,44 @@ body.modal-open { overflow: hidden; }
   max-width: 32rem;
   width: 100%;
 }
+.modal-close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--forest);
+  font: inherit;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.modal-close:hover { background: var(--cream-deep); }
+.modal-close:focus-visible { outline: 3px solid rgba(221, 161, 94, 0.55); }
 .modal h3 { font-size: 1.35rem; margin-bottom: 0.6rem; }
 .modal p { color: var(--ink-soft); margin-bottom: 0.8rem; }
-.modal .modal-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.4rem; }
-.modal .modal-actions .btn { font-size: 0.95rem; }
+.modal .modal-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 1.4rem;
+}
+.modal .modal-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.modal .modal-actions .btn:only-child { grid-column: 1 / -1; }
+.modal .modal-actions .btn[hidden] { display: none; }
 
 /* Footer */
 .site-footer { background: var(--forest); color: var(--cream); padding: 3.2rem 0 2rem; margin-top: 3rem; }

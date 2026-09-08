@@ -49,7 +49,7 @@
     <div class="facts">
       <div class="fact"><div class="fact-label">Days</div><div class="fact-value">Saturday &amp; Sunday</div></div>
       <div class="fact"><div class="fact-label">Open to</div><div class="fact-value">Brothers &amp; sisters</div></div>
-      <div class="fact"><div class="fact-label">Fee</div><div class="fact-value">$150 / day &nbsp;&middot;&nbsp; $250 / both</div></div>
+      <div class="fact"><div class="fact-label">Monthly online fee</div><div class="fact-value">$154.63 / day &nbsp;&middot;&nbsp; $257.51 / both</div></div>
     </div>
 
     <h2 class="section-title" style="margin-top:2.8rem;">What You Can Study</h2>
@@ -137,7 +137,7 @@
     <ol class="steps">
       <li><strong>Get in touch.</strong> Call, text, or email us to say which track you are interested in.</li>
       <li><strong>Assessment with the Shaykh.</strong> He listens to your recitation and places you in the track that fits your level.</li>
-      <li><strong>Pay securely online.</strong> After your assessment, pay by card through Stripe — either a recurring monthly subscription or one month at a time, whichever you prefer.</li>
+      <li><strong>Pay securely online.</strong> After your assessment, pay by card through Square with a recurring monthly subscription.</li>
     </ol>
 
     <div class="actions">
@@ -177,13 +177,14 @@
 
 <div class="modal-backdrop" id="payModal" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="payModalTitle">
+    <button class="modal-close" type="button" data-modal-close aria-label="Close payment window">&times;</button>
     <h3 id="payModalTitle">Before you pay</h3>
     <p>Please do not pay until you have been assessed by Shaykh Muhammad. The assessment decides which track you join, and it needs to happen first.</p>
-    <p>If you have not been assessed yet, go back and <a href="index.html#contact">contact us</a> to arrange it.</p>
+    <p>If you have not been assessed yet, go back and <a href="index.html#contact">contact us</a> to arrange it. If you have, choose the schedule approved at your assessment.</p>
+    <p data-payment-unavailable>If your approved payment option is not shown below, please <a href="index.html#contact">contact us</a>.</p>
     <div class="modal-actions">
-      <button class="btn btn-outline-dark" type="button" data-modal-close>Go back</button>
-      <!-- TODO: replace href with the Stripe Payment Link once the account is set up -->
-      <a class="btn btn-primary" href="#" target="_blank" rel="noopener">I have been assessed — continue</a>
+      <a class="btn btn-primary" data-square-payment="adultOneDay" href="#" target="_blank" rel="noopener" hidden>One day per week</a>
+      <a class="btn btn-primary" data-square-payment="adultBothDays" href="#" target="_blank" rel="noopener" hidden>Two days per week</a>
     </div>
   </div>
 </div>

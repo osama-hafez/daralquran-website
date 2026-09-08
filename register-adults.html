@@ -47,25 +47,25 @@
 <section>
   <div class="container">
     <h2 class="section-title">Pricing</h2>
-    <p class="section-sub">Choose the schedule that works for you. Payment is collected securely through Stripe after your assessment.</p>
+    <p class="section-sub">Choose the schedule that works for you. Payment is collected securely through Square after your assessment.</p>
 
     <div class="pricing-grid">
       <div class="pricing-card">
         <div class="price-label">One Day</div>
-        <div class="price">$150</div>
+        <div class="price">$154.63</div>
         <div class="price-period">per month</div>
-        <div class="price-detail">Saturday or Sunday — your choice</div>
+        <div class="price-detail">Saturday or Sunday — includes online payment processing</div>
       </div>
       <div class="pricing-card featured">
         <div class="price-label">Both Days</div>
-        <div class="price">$250</div>
+        <div class="price">$257.51</div>
         <div class="price-period">per month</div>
-        <div class="price-detail">Saturday &amp; Sunday — best value</div>
+        <div class="price-detail">Saturday &amp; Sunday — includes online payment processing</div>
       </div>
     </div>
 
     <div class="facts">
-      <div class="fact"><div class="fact-label">Payment</div><div class="fact-value">By card through Stripe</div></div>
+      <div class="fact"><div class="fact-label">Payment</div><div class="fact-value">By card through Square</div></div>
       <div class="fact"><div class="fact-label">When</div><div class="fact-value">After your assessment</div></div>
       <div class="fact"><div class="fact-label">Options</div><div class="fact-value">Monthly or recurring</div></div>
     </div>
@@ -82,7 +82,7 @@
       <li><strong>Fill out the registration form below.</strong> It takes just a few minutes and tells us what we need to get started.</li>
       <li><strong>Shaykh Muhammad will call you</strong> to discuss your level, answer your questions, and schedule your assessment.</li>
       <li><strong>Individual assessment.</strong> The Shaykh listens to your recitation and places you in the right track for your level.</li>
-      <li><strong>Pay securely online</strong> through Stripe — either a recurring monthly subscription or one month at a time.</li>
+      <li><strong>Pay securely online</strong> through Square with a recurring monthly subscription.</li>
     </ol>
   </div>
 </section>
@@ -194,13 +194,14 @@
 
 <div class="modal-backdrop" id="payModal" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="payModalTitle">
+    <button class="modal-close" type="button" data-modal-close aria-label="Close payment window">&times;</button>
     <h3 id="payModalTitle">Before you pay</h3>
     <p>Please do not pay until you have been assessed by Shaykh Muhammad. The assessment decides which track you join, and it needs to happen first.</p>
-    <p>If you have not been assessed yet, go back and <a href="index.html#contact">contact us</a> to arrange it.</p>
+    <p>If you have not been assessed yet, go back and <a href="index.html#contact">contact us</a> to arrange it. If you have, choose the schedule approved at your assessment.</p>
+    <p data-payment-unavailable>If your approved payment option is not shown below, please <a href="index.html#contact">contact us</a>.</p>
     <div class="modal-actions">
-      <button class="btn btn-outline-dark" type="button" data-modal-close>Go back</button>
-      <!-- TODO: replace href with the Stripe Payment Link once the account is set up -->
-      <a class="btn btn-primary" href="#" target="_blank" rel="noopener">I have been assessed — continue</a>
+      <a class="btn btn-primary" data-square-payment="adultOneDay" href="#" target="_blank" rel="noopener" hidden>One day per week</a>
+      <a class="btn btn-primary" data-square-payment="adultBothDays" href="#" target="_blank" rel="noopener" hidden>Two days per week</a>
     </div>
   </div>
 </div>

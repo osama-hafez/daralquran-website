@@ -92,7 +92,7 @@
       <li><strong>Fill out the registration form.</strong> Tell us about your child and their Qur'an background.</li>
       <li><strong>Receive a personal call.</strong> Shaykh Muhammad will call you directly to answer any questions you may have.</li>
       <li><strong>Individual assessment.</strong> Every child is assessed before starting, so they are placed in the right track from day one.</li>
-      <li><strong>Pay securely online.</strong> Once you have been assessed, pay by card through Stripe — either a recurring monthly subscription or one month at a time, whichever you prefer.</li>
+      <li><strong>Pay securely online.</strong> Once your child has been assessed, pay by card through Square with a recurring monthly subscription.</li>
     </ol>
 
     <div class="actions">
@@ -130,13 +130,13 @@
 
 <div class="modal-backdrop" id="payModal" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="payModalTitle">
+    <button class="modal-close" type="button" data-modal-close aria-label="Close payment window">&times;</button>
     <h3 id="payModalTitle">Before you pay</h3>
     <p>Please do not pay until your child has been assessed by Shaykh Muhammad. The assessment decides which track they join, and it needs to happen first.</p>
     <p>If you have not been assessed yet, go back and <a href="index.html#contact">contact us</a> to arrange it.</p>
+    <p data-payment-unavailable>If your approved payment option is not shown below, please <a href="index.html#contact">contact us</a>.</p>
     <div class="modal-actions">
-      <button class="btn btn-outline-dark" type="button" data-modal-close>Go back</button>
-      <!-- TODO: replace href with the Stripe Payment Link once the account is set up -->
-      <a class="btn btn-primary" href="#" target="_blank" rel="noopener">I have been assessed — continue</a>
+      <a class="btn btn-primary" data-square-payment="kids" href="#" target="_blank" rel="noopener" hidden>Set up monthly payment</a>
     </div>
   </div>
 </div>

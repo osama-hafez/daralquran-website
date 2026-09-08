@@ -1,5 +1,30 @@
 // Shared behaviour for every page: mobile nav, Services dropdown, payment warning.
 
+// Paste the live Square Payment Link URLs here after the account owner creates
+// the recurring plans in Square. Keeping them in one place prevents the same
+// checkout URL from being copied into several pages.
+const squarePaymentLinks = {
+  adultOneDay: 'https://square.link/u/BFewchdD',
+  adultBothDays: 'https://square.link/u/1i5sHagl',
+  kids: ''
+};
+
+document.querySelectorAll('[data-square-payment]').forEach(link => {
+  const paymentUrl = squarePaymentLinks[link.dataset.squarePayment];
+  if (!paymentUrl) return;
+
+  link.href = paymentUrl;
+  link.hidden = false;
+});
+
+document.querySelectorAll('.modal').forEach(modal => {
+  const paymentLinks = [...modal.querySelectorAll('[data-square-payment]')];
+  const unavailableMessage = modal.querySelector('[data-payment-unavailable]');
+  if (unavailableMessage && paymentLinks.length && paymentLinks.every(link => !link.hidden)) {
+    unavailableMessage.hidden = true;
+  }
+});
+
 // Close the mobile menu after tapping a nav link
 const navToggle = document.getElementById('nav-toggle');
 if (navToggle) {
@@ -35,7 +60,7 @@ document.addEventListener('keydown', event => {
 });
 
 // Payment warning — students must be assessed by the Shaykh before paying, so
-// every "pay fees" button opens this reminder instead of going straight to Stripe.
+// every "pay fees" button opens this reminder instead of going straight to Square.
 const payModal = document.getElementById('payModal');
 let payReturnFocus = null;
 
